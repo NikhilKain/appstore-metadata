@@ -2,12 +2,7 @@ name: Update App Metadata
 
 on:
   schedule:
-    # Full re-discovery once per day at 2 AM UTC
-    # (fetches all sources, rebuilds everything — takes 60-120 min)
     - cron: "0 2 * * *"
-
-    # Quick index refresh every hour
-    # (only refreshes index.json + detail files for top apps — takes < 5 min)
     - cron: "0 * * * *"
 
   workflow_dispatch:
@@ -18,8 +13,8 @@ on:
         default: "full"
         type: choice
         options:
-          - full       # full re-discovery from all sources
-          - quick      # index refresh only (reads cached page files)
+          - full
+          - quick
 
 permissions:
   contents: write
@@ -27,7 +22,7 @@ permissions:
 jobs:
   update-metadata:
     runs-on: ubuntu-latest
-    timeout-minutes: 180    # full run can take up to 2 hours
+    timeout-minutes: 180
 
     steps:
       - name: Checkout repo
@@ -42,10 +37,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      # Determine whether this is a full run or quick run.
-      # Manual triggers use the input. Scheduled triggers:
-      #   - 2 AM UTC cron  → full
-      #   - every other hour → quick
       - name: Set run mode
         id: mode
         run: |
@@ -57,13 +48,6 @@ jobs:
             echo "mode=quick" >> $GITHUB_OUTPUT
           fi
 
-      # -----------------------------------------------------------------------
-      # Full run — re-discovers all apps from every source
-      # Tokens used:
-      #   GITLAB_TOKEN   — optional, raises GitLab API rate limits
-      #   CODEBERG_TOKEN — optional, raises Codeberg API rate limits
-      #   (F-Droid, Flathub, Winget need no tokens — fully public APIs)
-      # -----------------------------------------------------------------------
       - name: Run metadata fetcher (full)
         if: steps.mode.outputs.mode == 'full'
         env:
@@ -72,11 +56,7 @@ jobs:
           RUN_MODE: full
         run: python scripts/fetch_metadata.py
 
-      # -----------------------------------------------------------------------
-      # Quick run — rebuilds index from cached page files only
-      # (no external API calls except for stale detail files)
-      # -----------------------------------------------------------------------
-      - name: Run metadata fetcher (quick — index refresh only)
+      - name: Run metadata fetcher (quick)
         if: steps.mode.outputs.mode == 'quick'
         env:
           GITLAB_TOKEN:   ${{ secrets.GITLAB_TOKEN }}
@@ -84,14 +64,14 @@ jobs:
           RUN_MODE: quick
         run: python scripts/refresh_index.py
 
-      # -----------------------------------------------------------------------
-      # Push output to gh-pages as an orphan commit (no history bloat).
-      # Each deploy replaces the previous commit entirely — the branch always
-      # has exactly 1 commit, keeping the repo size small forever.
-      # -----------------------------------------------------------------------
       - name: Commit and push to gh-pages
         run: |
-          cd data
+          # Wrap data/ inside a deploy folder so gh-pages serves it at /data/
+          # The client fetches {cdnBase}/data/index.json — this keeps the path correct
+          mkdir _deploy
+          cp -r data _deploy/data
+
+          cd _deploy
 
           git init
           git config user.name  "github-actions[bot]"
