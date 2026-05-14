@@ -328,45 +328,81 @@ def fetch_flathub() -> list:
         print("[Flathub] Catalog unavailable, skipping")
         return []
 
-    # The endpoint returns a list of app objects
-    apps = raw if isinstance(raw, list) else raw.get("apps", [])
+    # API can return:
+    #   - a list of app dicts                         → use directly
+    #   - a dict {"apps": [...]}                      → use raw["apps"]
+    #   - a dict {appId: {...}, appId2: {...}}         → use dict values
+    if isinstance(raw, list):
+        apps = raw
+    elif isinstance(raw, dict):
+        if "apps" in raw:
+            apps = raw["apps"]
+        else:
+            # Keys are app IDs, values are app objects
+            apps = list(raw.values())
+    else:
+        print("[Flathub] Unexpected response type, skipping")
+        return []
+
+    print(f"  [Flathub] API returned {len(apps)} items")
     entries = []
 
     for app in apps:
-        # Skip non-dict items (API sometimes returns strings in the list)
+        # Skip non-dict items
         if not isinstance(app, dict):
             continue
-        app_id  = app.get("id") or app.get("flatpakAppId") or ""
+
+        # App ID can be in different fields depending on API version
+        app_id = (
+            app.get("id") or
+            app.get("flatpakAppId") or
+            app.get("appId") or
+            app.get("app_id") or ""
+        )
         if not app_id:
             continue
 
         name    = app.get("name") or app_id
-        summary = (app.get("summary") or "")[:160]
+        # name can be a dict {"en": "VLC"} in some API versions
+        if isinstance(name, dict):
+            name = name.get("en") or name.get("en-US") or app_id
 
-        # Icon: prefer remote URL, fall back to Flathub CDN pattern
-        icon = app.get("icon") or f"https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/{app_id}.png"
+        summary = app.get("summary") or app.get("description") or ""
+        if isinstance(summary, dict):
+            summary = summary.get("en") or summary.get("en-US") or ""
+        summary = str(summary)[:160]
 
-        # Version: grab from latest release if present
-        releases = app.get("releases") or app.get("release", []) or []
-        version  = releases[0].get("version") if releases else None
+        icon = (
+            app.get("icon") or
+            app.get("iconUrl") or
+            f"https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/{app_id}.png"
+        )
+
+        releases = app.get("releases") or app.get("release") or []
+        version  = None
+        if releases and isinstance(releases, list) and isinstance(releases[0], dict):
+            version = releases[0].get("version")
+
+        categories = app.get("categories") or []
+        if isinstance(categories, str):
+            categories = [categories]
 
         entries.append({
             "id":         f"flathub:{app_id}",
             "source":     "flathub",
             "package":    app_id,
-            "name":       name,
+            "name":       str(name),
             "summary":    summary,
-            "icon":       icon,
+            "icon":       str(icon),
             "stars":      0,
-            "categories": app.get("categories", []),
+            "categories": categories,
             "version":    version,
             "updated":    app.get("inStoreSinceDate") or app.get("addedAt"),
-            "website":    app.get("urls", {}).get("homepage") or app.get("projectLicense"),
-            "license":    app.get("projectLicense"),
+            "website":    (app.get("urls") or {}).get("homepage") if isinstance(app.get("urls"), dict) else None,
+            "license":    app.get("projectLicense") or app.get("license"),
             "detail_url": f"data/detail/flathub/{slugify(app_id)}.json",
         })
 
-    # Sort by name alphabetically (no star count for Flathub)
     entries.sort(key=lambda x: x["name"].lower())
     write_pages(DATA_DIR / "sources" / "flathub", entries, "flathub")
     print(f"[Flathub] Done — {len(entries):,} apps")
@@ -378,45 +414,84 @@ def fetch_flathub() -> list:
 # ---------------------------------------------------------------------------
 
 def fetch_winget() -> list:
-    print("\n[Winget] Fetching package catalog from winget.run …")
-    entries  = []
-    seen     = set()
-    skip     = 0
-    per_page = 100
+    print("\n[Winget] Fetching package catalog …")
+    entries = []
+    seen    = set()
+
+    # Try winget.run API — supports cursor-based pagination
+    # Endpoint returns {"Packages": [...], "ContinuationToken": "..."}
+    continuation = None
+    page_num = 0
 
     while True:
+        params = {"MaximumResults": 100}
+        if continuation:
+            params["ContinuationToken"] = continuation
+
         data = get(
             "https://api.winget.run/v2/packages",
-            params={"limit": per_page, "skip": skip},
+            params=params,
             pause=GENERIC_DELAY,
         )
+
         if not data:
             break
 
-        # winget.run returns either a list or {"packages": [...], "count": N}
+        # Handle different possible response shapes
         if isinstance(data, list):
             packages = data
+            continuation = None
         elif isinstance(data, dict):
-            packages = data.get("packages") or data.get("data") or []
+            # Try multiple common key names
+            packages = (
+                data.get("Packages") or
+                data.get("packages") or
+                data.get("data") or
+                data.get("results") or
+                []
+            )
+            continuation = data.get("ContinuationToken") or data.get("continuationToken")
         else:
             break
 
         if not packages:
+            # Log what we actually got so the next fix is easier
+            if isinstance(data, dict):
+                print(f"  [Winget] Response keys: {list(data.keys())[:10]}")
             break
 
         for pkg in packages:
-            pkg_id = pkg.get("id") or pkg.get("packageIdentifier") or ""
+            if not isinstance(pkg, dict):
+                continue
+            pkg_id = (
+                pkg.get("PackageIdentifier") or
+                pkg.get("packageIdentifier") or
+                pkg.get("id") or
+                pkg.get("Id") or ""
+            )
             if not pkg_id or pkg_id in seen:
                 continue
             seen.add(pkg_id)
 
-            name      = pkg.get("name") or pkg.get("packageName") or pkg_id
-            publisher = pkg.get("publisher") or pkg.get("publisherName") or ""
-            versions  = pkg.get("versions") or []
-            version   = versions[0].get("packageVersion") if versions else pkg.get("version")
+            name = (
+                pkg.get("PackageName") or
+                pkg.get("packageName") or
+                pkg.get("name") or
+                pkg.get("Name") or
+                pkg_id
+            )
+            publisher = (
+                pkg.get("Publisher") or
+                pkg.get("publisher") or
+                pkg.get("publisherName") or ""
+            )
+            versions = pkg.get("Versions") or pkg.get("versions") or []
+            version  = None
+            if versions and isinstance(versions, list):
+                v = versions[0]
+                version = v.get("PackageVersion") or v.get("packageVersion") or v.get("version") if isinstance(v, dict) else str(v)
 
-            # Slugify the id for the detail file path
-            parts = pkg_id.split(".", 1)
+            parts    = pkg_id.split(".", 1)
             pub_slug = slugify(parts[0]) if parts else "unknown"
             id_slug  = slugify(pkg_id)
 
@@ -424,26 +499,30 @@ def fetch_winget() -> list:
                 "id":        f"winget:{pkg_id}",
                 "source":    "winget",
                 "package":   pkg_id,
-                "name":      name,
-                "publisher": publisher,
-                "summary":   (pkg.get("description") or pkg.get("shortDescription") or "")[:160],
-                "icon":      pkg.get("iconUrl") or "",
+                "name":      str(name),
+                "publisher": str(publisher),
+                "summary":   str(pkg.get("ShortDescription") or pkg.get("shortDescription") or pkg.get("description") or "")[:160],
+                "icon":      pkg.get("IconUrl") or pkg.get("iconUrl") or "",
                 "stars":     0,
                 "version":   version,
                 "updated":   None,
-                "homepage":  pkg.get("homepage") or pkg.get("publisherUrl") or "",
-                "license":   pkg.get("license") or "",
+                "homepage":  pkg.get("PackageUrl") or pkg.get("homepage") or pkg.get("PublisherUrl") or "",
+                "license":   pkg.get("License") or pkg.get("license") or "",
                 "detail_url": f"data/detail/winget/{pub_slug}/{id_slug}.json",
             })
 
-        skip += per_page
-        if len(packages) < per_page:
-            break   # last page
-
-        if len(entries) % 5000 == 0 and len(entries) > 0:
+        page_num += 1
+        if page_num % 50 == 0:
             print(f"  fetched {len(entries):,} winget packages so far …")
 
-    # Sort alphabetically by name
+        # Stop if no continuation token and got a full page (means more pages exist)
+        if not continuation:
+            if not isinstance(data, list) or len(packages) < 100:
+                break
+        
+        if len(entries) >= TOP_N_PER_SOURCE:
+            break
+
     entries.sort(key=lambda x: x["name"].lower())
     write_pages(DATA_DIR / "sources" / "winget", entries, "winget")
     print(f"[Winget] Done — {len(entries):,} packages")
@@ -532,7 +611,7 @@ def build_index(all_apps: list):
     starred   = sorted([a for a in all_apps if a.get("stars", 0) > 0],
                        key=lambda x: x["stars"], reverse=True)
     unstarred = sorted([a for a in all_apps if a.get("stars", 0) == 0],
-                       key=lambda x: x.get("updated") or "", reverse=True)
+                       key=lambda x: str(x.get("updated") or ""), reverse=True)
 
     top = (starred + unstarred)[:TOP_INDEX_SIZE]
     write_json(DATA_DIR / "index.json", {
