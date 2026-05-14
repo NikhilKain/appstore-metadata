@@ -48,6 +48,19 @@ jobs:
             echo "mode=quick" >> $GITHUB_OUTPUT
           fi
 
+      # Quick run needs the existing source page files from gh-pages
+      # (refresh_index.py reads data/sources/ to rebuild index.json)
+      # Full run skips this — it fetches everything fresh from the APIs
+      - name: Restore data from gh-pages (quick run only)
+        if: steps.mode.outputs.mode == 'quick'
+        run: |
+          git fetch origin gh-pages 2>/dev/null || true
+          if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
+            git checkout origin/gh-pages -- data 2>/dev/null || echo "No data on gh-pages yet, quick run will be skipped"
+          else
+            echo "gh-pages branch does not exist yet"
+          fi
+
       - name: Run metadata fetcher (full)
         if: steps.mode.outputs.mode == 'full'
         env:
@@ -62,12 +75,20 @@ jobs:
           GITLAB_TOKEN:   ${{ secrets.GITLAB_TOKEN }}
           CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
           RUN_MODE: quick
-        run: python scripts/refresh_index.py
+        run: |
+          if [ -d "data/sources" ]; then
+            python scripts/refresh_index.py
+          else
+            echo "No cached source data found — skipping quick run (waiting for first full run)"
+          fi
 
       - name: Commit and push to gh-pages
         run: |
-          # Wrap data/ inside a deploy folder so gh-pages serves it at /data/
-          # The client fetches {cdnBase}/data/index.json — this keeps the path correct
+          if [ ! -d "data" ]; then
+            echo "No data directory — nothing to deploy, exiting cleanly"
+            exit 0
+          fi
+
           mkdir _deploy
           cp -r data _deploy/data
 
