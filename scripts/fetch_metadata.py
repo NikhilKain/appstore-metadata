@@ -163,7 +163,7 @@ def fetch_fdroid() -> list:
     for pkg, info in packages.items():
         meta      = info.get("metadata", {})
         versions  = info.get("versions", {})
-        latest_vc = max(versions.keys(), key=int, default=None) if versions else None
+        latest_vc = max(versions.keys(), key=lambda k: int(k) if k.isdigit() else -1, default=None) if versions else None
         latest    = versions.get(latest_vc, {}) if latest_vc else {}
         manifest  = latest.get("manifest", {})
         apk_file  = latest.get("file", {}).get("name", "")
