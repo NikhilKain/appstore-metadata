@@ -58,29 +58,6 @@ CODEBERG_DELAY  = 0.5   # seconds between Codeberg API calls (lower limits than 
 GENERIC_DELAY   = 0.1   # seconds between other API calls
 
 # ---------------------------------------------------------------------------
-# Codeberg star-range buckets
-#
-# Gitea's search API (used by Codeberg) caps results per query.
-# Bucketing by star range lets us collect more unique results.
-# ---------------------------------------------------------------------------
-
-CODEBERG_STAR_RANGES = [
-    ("10000", None),
-    ("5000",  "9999"),
-    ("2000",  "4999"),
-    ("1000",  "1999"),
-    ("500",   "999"),
-    ("200",   "499"),
-    ("100",   "199"),
-    ("50",    "99"),
-    ("20",    "49"),
-    ("10",    "19"),
-    ("5",     "9"),
-    ("1",     "4"),
-    ("0",     "0"),
-]
-
-# ---------------------------------------------------------------------------
 # HTTP helpers
 # ---------------------------------------------------------------------------
 
@@ -279,83 +256,62 @@ def fetch_codeberg() -> list:
     print("\n[Codeberg] Discovering top repos …")
     entries = []
     seen    = set()
+    page    = 1
 
-    # Gitea search API supports sorting by stars.
-    # We bucket by star count to bypass per-query result caps (similar to GitHub).
-    for lo_str, hi_str in CODEBERG_STAR_RANGES:
-        if len(entries) >= TOP_N_PER_SOURCE:
-            break
-
-        lo = int(lo_str)
-        page = 1
-
-        while len(entries) < TOP_N_PER_SOURCE:
-            params = {
+    # Gitea search API: paginate through all repos sorted by stars.
+    # Max 50 per page; no star-range filtering available (unlike GitHub).
+    while len(entries) < TOP_N_PER_SOURCE:
+        data = get(
+            "https://codeberg.org/api/v1/repos/search",
+            headers=CODEBERG_HDRS,
+            params={
                 "sort":  "stars",
                 "order": "desc",
-                "limit": 50,      # Codeberg/Gitea max is 50
+                "limit": 50,
                 "page":  page,
-            }
-            # Gitea doesn't support star-range filtering in query params directly,
-            # so we use the `q` param to search broadly and sort by stars.
-            # After fetching, we stop when stars drop below the bucket floor.
-            data = get(
-                "https://codeberg.org/api/v1/repos/search",
-                headers=CODEBERG_HDRS,
-                params=params,
-                pause=CODEBERG_DELAY,
-            )
-            if not data:
-                break
+            },
+            pause=CODEBERG_DELAY,
+        )
+        if not data:
+            break
 
-            repos = data.get("data", [])
-            if not repos:
-                break
+        repos = data.get("data", [])
+        if not repos:
+            break
 
-            added_this_page = 0
-            for r in repos:
-                full_name = r.get("full_name", "")
-                if full_name in seen:
-                    continue
+        for r in repos:
+            full_name = r.get("full_name", "")
+            if not full_name or full_name in seen:
+                continue
+            seen.add(full_name)
+            owner = r.get("owner", {}).get("login", "")
+            repo  = r.get("name", "")
+            entries.append({
+                "id":       f"codeberg:{full_name}",
+                "source":   "codeberg",
+                "owner":    owner,
+                "repo":     repo,
+                "name":     repo,
+                "summary":  (r.get("description") or "")[:160],
+                "icon":     r.get("avatar_url") or r.get("owner", {}).get("avatar_url", ""),
+                "stars":    r.get("stars_count", 0),
+                "forks":    r.get("forks_count", 0),
+                "language": r.get("language"),
+                "topics":   r.get("topics", []),
+                "homepage": r.get("html_url", f"https://codeberg.org/{full_name}"),
+                "updated":  r.get("updated"),
+                "version":  None,
+                "detail_url": f"data/detail/codeberg/{owner}/{repo}.json",
+            })
 
-                star_count = r.get("stars_count", 0)
-                # Skip repos below the bucket floor to avoid duplicates
-                if hi_str and star_count > int(hi_str):
-                    continue
-                if star_count < lo:
-                    # Stars are sorted descending — once we're below the floor, stop
-                    break
+        if len(repos) < 50:
+            break  # last page reached
 
-                seen.add(full_name)
-                owner = r.get("owner", {}).get("login", "")
-                repo  = r.get("name", "")
-                entries.append({
-                    "id":       f"codeberg:{full_name}",
-                    "source":   "codeberg",
-                    "owner":    owner,
-                    "repo":     repo,
-                    "name":     repo,
-                    "summary":  (r.get("description") or "")[:160],
-                    "icon":     r.get("avatar_url") or r.get("owner", {}).get("avatar_url", ""),
-                    "stars":    star_count,
-                    "forks":    r.get("forks_count", 0),
-                    "language": r.get("language"),
-                    "topics":   r.get("topics", []),
-                    "homepage": r.get("html_url", f"https://codeberg.org/{full_name}"),
-                    "updated":  r.get("updated",),
-                    "version":  None,
-                    "detail_url": f"data/detail/codeberg/{owner}/{repo}.json",
-                })
-                added_this_page += 1
-
-            if len(repos) < 50 or added_this_page == 0:
-                break
-            page += 1
-
-        print(f"  bucket ≥{lo_str} stars → {len(entries):,} total so far")
+        page += 1
+        if page % 10 == 0:
+            print(f"  page {page} → {len(entries):,} repos so far")
 
     entries.sort(key=lambda x: x["stars"], reverse=True)
-    entries = entries[:TOP_N_PER_SOURCE]
     write_pages(DATA_DIR / "sources" / "codeberg", entries, "codeberg")
     print(f"[Codeberg] Done — {len(entries):,} repos")
     return entries
@@ -377,6 +333,9 @@ def fetch_flathub() -> list:
     entries = []
 
     for app in apps:
+        # Skip non-dict items (API sometimes returns strings in the list)
+        if not isinstance(app, dict):
+            continue
         app_id  = app.get("id") or app.get("flatpakAppId") or ""
         if not app_id:
             continue
