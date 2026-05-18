@@ -390,55 +390,65 @@ def fetch_github() -> list:
 
 
 # ---------------------------------------------------------------------------
-# IzzyOnDroid — repos from the IzzyOnDroid GitHub org (uses GH_PAT secret)
+# IzzyOnDroid — full catalog from the IzzyOnDroid F-Droid repo index
 # ---------------------------------------------------------------------------
 
 def fetch_izzy() -> list:
-    print("\n[IzzyOnDroid] Fetching repos from IzzyOnDroid GitHub org …")
-    entries = []
-    seen    = set()
+    print("\n[IzzyOnDroid] Fetching from IzzyOnDroid F-Droid repository index …")
+    raw = get("https://apt.izzysoft.de/fdroid/repo/index-v1.json")
+    if not raw:
+        print("[IzzyOnDroid] Index unavailable, skipping")
+        return []
 
-    for page in range(1, 11):   # IzzyOnDroid has ~600 repos; 10 pages of 100 covers all
-        data = get(
-            "https://api.github.com/search/repositories",
-            headers=GITHUB_HDRS,
-            params={"q": "user:IzzyOnDroid", "sort": "stars", "order": "desc", "per_page": 100, "page": page},
-            pause=GITHUB_DELAY,
-        )
-        if not data:
-            break
-        items = data.get("items", [])
-        if not items:
-            break
-        for repo in items:
-            rid = repo["id"]
-            if rid in seen:
-                continue
-            seen.add(rid)
-            owner = repo["owner"]["login"]
-            rname = repo["name"]
-            entries.append({
-                "id":         f"izzy:{rid}",
-                "source":     "izzy",
-                "name":       rname,
-                "summary":    (repo.get("description") or "")[:160],
-                "icon":       repo["owner"].get("avatar_url", ""),
-                "stars":      repo.get("stargazers_count", 0),
-                "homepage":   repo.get("html_url", f"https://github.com/{owner}/{rname}"),
-                "updated":    repo.get("updated_at"),
-                "version":    "",
-                "apk_url":    "",
-                "categories": repo.get("topics", []),
-                "license":    (repo.get("license") or {}).get("spdx_id", ""),
-                "language":   repo.get("language") or "",
-                "detail_url": f"data/detail/izzy/{owner}/{rname}.json",
-            })
-        if len(items) < 100:
-            break
+    apps     = raw.get("apps", [])
+    packages = raw.get("packages", {})
+    entries  = []
 
-    entries.sort(key=lambda x: x["stars"], reverse=True)
+    for app in apps:
+        pkg = app.get("packageName", "")
+        if not pkg:
+            continue
+
+        # Latest release info
+        pkg_versions = packages.get(pkg, [])
+        latest   = pkg_versions[0] if pkg_versions else {}
+        version  = latest.get("versionName", "")
+        apk_name = latest.get("apkName", "")
+        apk_url  = f"https://apt.izzysoft.de/fdroid/repo/{apk_name}" if apk_name else ""
+
+        icon_file = app.get("icon") or ""
+        icon_url  = f"https://apt.izzysoft.de/fdroid/repo/{icon_file}" if icon_file else ""
+
+        # Prefer source code URL (usually GitHub); fall back to IzzyOnDroid page
+        source_code = app.get("sourceCode") or app.get("webSite") or ""
+        homepage    = source_code or f"https://apt.izzysoft.de/fdroid/index/apk/{pkg}"
+
+        categories = app.get("categories") or []
+        if isinstance(categories, str):
+            categories = [categories]
+
+        added = app.get("added") or app.get("lastUpdated")
+
+        entries.append({
+            "id":         f"izzy:{pkg}",
+            "source":     "izzy",
+            "package":    pkg,
+            "name":       app.get("name") or pkg,
+            "summary":    (app.get("summary") or "")[:160],
+            "icon":       icon_url,
+            "stars":      0,
+            "homepage":   homepage,
+            "version":    version,
+            "apk_url":    apk_url,
+            "categories": categories,
+            "license":    app.get("license") or "",
+            "updated":    str(added) if added else "",
+            "detail_url": f"data/detail/izzy/{slugify(pkg)}.json",
+        })
+
+    entries.sort(key=lambda x: x["name"].lower())
     write_pages(DATA_DIR / "sources" / "izzy", entries, "izzy")
-    print(f"[IzzyOnDroid] Done — {len(entries):,} repos")
+    print(f"[IzzyOnDroid] Done — {len(entries):,} apps")
     return entries
 
 
