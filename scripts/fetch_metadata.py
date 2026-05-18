@@ -1,5 +1,5 @@
 """
-fetch_metadata.py  (v3 — fdroid, gitlab, codeberg, flathub, winget)
+fetch_metadata.py  (v4 — fdroid, gitlab, codeberg, flathub, winget, github, izzy)
 
 Automatically fetches the top apps from every configured source.
 No manual lists needed.
@@ -70,6 +70,12 @@ if tok := os.environ.get("GITLAB_TOKEN"):
 CODEBERG_HDRS = {}
 if tok := os.environ.get("CODEBERG_TOKEN"):
     CODEBERG_HDRS["Authorization"] = f"token {tok}"
+
+GITHUB_HDRS = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
+if tok := os.environ.get("GH_PAT"):
+    GITHUB_HDRS["Authorization"] = f"Bearer {tok}"
+
+GITHUB_DELAY = 2.1   # GitHub search API: 30 req/min authenticated → 1 per 2s
 
 _session = requests.Session()
 
@@ -314,6 +320,125 @@ def fetch_codeberg() -> list:
     entries.sort(key=lambda x: x["stars"], reverse=True)
     write_pages(DATA_DIR / "sources" / "codeberg", entries, "codeberg")
     print(f"[Codeberg] Done — {len(entries):,} repos")
+    return entries
+
+
+# ---------------------------------------------------------------------------
+# GitHub — top Android repos by stars (uses GH_PAT secret)
+# ---------------------------------------------------------------------------
+
+def fetch_github() -> list:
+    print("\n[GitHub] Discovering top Android repos …")
+    entries = []
+    seen    = set()
+
+    # Multiple queries give broader coverage; each yields up to 1 000 results
+    search_queries = [
+        "topic:android stars:>100",
+        "topic:android-app stars:>10",
+        "topic:open-source-android",
+    ]
+
+    for query in search_queries:
+        if len(entries) >= TOP_N_PER_SOURCE:
+            break
+        print(f"  Query: {query!r}")
+        for page in range(1, 11):   # GitHub caps search at 1 000 results (10 pages × 100)
+            if len(entries) >= TOP_N_PER_SOURCE:
+                break
+            data = get(
+                "https://api.github.com/search/repositories",
+                headers=GITHUB_HDRS,
+                params={"q": query, "sort": "stars", "order": "desc", "per_page": 100, "page": page},
+                pause=GITHUB_DELAY,
+            )
+            if not data:
+                break
+            items = data.get("items", [])
+            if not items:
+                break
+            for repo in items:
+                rid = repo["id"]
+                if rid in seen:
+                    continue
+                seen.add(rid)
+                owner = repo["owner"]["login"]
+                rname = repo["name"]
+                entries.append({
+                    "id":         f"github:{rid}",
+                    "source":     "github",
+                    "name":       rname,
+                    "summary":    (repo.get("description") or "")[:160],
+                    "icon":       repo["owner"].get("avatar_url", ""),
+                    "stars":      repo.get("stargazers_count", 0),
+                    "homepage":   repo.get("html_url", f"https://github.com/{owner}/{rname}"),
+                    "updated":    repo.get("updated_at"),
+                    "version":    "",
+                    "apk_url":    "",
+                    "categories": repo.get("topics", []),
+                    "license":    (repo.get("license") or {}).get("spdx_id", ""),
+                    "language":   repo.get("language") or "",
+                    "detail_url": f"data/detail/github/{owner}/{rname}.json",
+                })
+            if len(items) < 100:
+                break   # last page for this query
+
+    entries.sort(key=lambda x: x["stars"], reverse=True)
+    write_pages(DATA_DIR / "sources" / "github", entries, "github")
+    print(f"[GitHub] Done — {len(entries):,} repos")
+    return entries
+
+
+# ---------------------------------------------------------------------------
+# IzzyOnDroid — repos from the IzzyOnDroid GitHub org (uses GH_PAT secret)
+# ---------------------------------------------------------------------------
+
+def fetch_izzy() -> list:
+    print("\n[IzzyOnDroid] Fetching repos from IzzyOnDroid GitHub org …")
+    entries = []
+    seen    = set()
+
+    for page in range(1, 11):   # IzzyOnDroid has ~600 repos; 10 pages of 100 covers all
+        data = get(
+            "https://api.github.com/search/repositories",
+            headers=GITHUB_HDRS,
+            params={"q": "user:IzzyOnDroid", "sort": "stars", "order": "desc", "per_page": 100, "page": page},
+            pause=GITHUB_DELAY,
+        )
+        if not data:
+            break
+        items = data.get("items", [])
+        if not items:
+            break
+        for repo in items:
+            rid = repo["id"]
+            if rid in seen:
+                continue
+            seen.add(rid)
+            owner = repo["owner"]["login"]
+            rname = repo["name"]
+            entries.append({
+                "id":         f"izzy:{rid}",
+                "source":     "izzy",
+                "name":       rname,
+                "summary":    (repo.get("description") or "")[:160],
+                "icon":       repo["owner"].get("avatar_url", ""),
+                "stars":      repo.get("stargazers_count", 0),
+                "homepage":   repo.get("html_url", f"https://github.com/{owner}/{rname}"),
+                "updated":    repo.get("updated_at"),
+                "version":    "",
+                "apk_url":    "",
+                "categories": repo.get("topics", []),
+                "license":    (repo.get("license") or {}).get("spdx_id", ""),
+                "language":   repo.get("language") or "",
+                "detail_url": f"data/detail/izzy/{owner}/{rname}.json",
+            })
+        if len(items) < 100:
+            break
+
+    entries.sort(key=lambda x: x["stars"], reverse=True)
+    write_pages(DATA_DIR / "sources" / "izzy", entries, "izzy")
+    print(f"[IzzyOnDroid] Done — {len(entries):,} repos")
     return entries
 
 
@@ -590,7 +715,7 @@ def prefetch_details(all_apps: list):
             # GitLab, Codeberg, and Winget already have enough data
             # in the index entry to render a full detail page without
             # an extra API call — so we just copy the index entry.
-            elif src in ("gitlab", "codeberg", "winget"):
+            elif src in ("gitlab", "codeberg", "winget", "github", "izzy"):
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 write_json(dest, {**entry, "fetched_at": now_iso()})
                 done += 1
@@ -640,7 +765,7 @@ def write_meta(counts: dict):
 def main():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     print("=" * 60)
-    print(" App metadata auto-discovery (fdroid/gitlab/codeberg/flathub/winget)")
+    print(" App metadata auto-discovery (fdroid/gitlab/codeberg/flathub/winget/github/izzy)")
     print("=" * 60)
 
     fd = fetch_fdroid()
@@ -648,8 +773,10 @@ def main():
     cb = fetch_codeberg()
     fh = fetch_flathub()
     wg = fetch_winget()
+    gh = fetch_github()
+    iz = fetch_izzy()
 
-    all_apps = fd + gl + cb + fh + wg
+    all_apps = fd + gl + cb + fh + wg + gh + iz
 
     build_index(all_apps)
     write_meta({
@@ -658,6 +785,8 @@ def main():
         "codeberg": len(cb),
         "flathub":  len(fh),
         "winget":   len(wg),
+        "github":   len(gh),
+        "izzy":     len(iz),
     })
     prefetch_details(all_apps)
 
