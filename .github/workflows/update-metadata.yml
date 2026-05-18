@@ -82,6 +82,16 @@ jobs:
             echo "No cached source data found — skipping quick run (waiting for first full run)"
           fi
 
+      - name: Fetch GitHub release data
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -d "data" ]; then
+            python scripts/fetch_releases.py
+          else
+            echo "No data directory yet — skipping GitHub release fetch"
+          fi
+
       - name: Commit and push to gh-pages
         run: |
           if [ ! -d "data" ]; then
