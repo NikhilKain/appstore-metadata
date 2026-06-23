@@ -101,6 +101,7 @@ jobs:
 
           mkdir _deploy
           cp -r data _deploy/data
+          cp announcement.json _deploy/announcement.json
 
           cd _deploy
 
