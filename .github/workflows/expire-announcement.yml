@@ -1,0 +1,35 @@
+name: Expire Giveaway Announcement
+
+on:
+  schedule:
+    - cron: "30 10 28 6 *"   # 28 June, 10:30 UTC = 4:00 PM IST
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  expire:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Flip active to false
+        run: |
+          python3 - << 'EOF'
+          import json
+          with open("announcement.json") as f:
+              data = json.load(f)
+          data["active"] = False
+          with open("announcement.json", "w") as f:
+              json.dump(data, f, indent=2)
+          EOF
+
+      - name: Commit and push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add announcement.json
+          git commit -m "chore: auto-expire giveaway announcement" || echo "Nothing to commit"
+          git push
