@@ -23,7 +23,9 @@ from fetch_metadata import (
     write_json, write_meta, build_index, prefetch_details,
 )
 
-SOURCES = ["fdroid", "gitlab", "codeberg", "flathub", "winget"]
+# All sources that belong in the master index. "newly-launched" is deliberately
+# absent — its entries are GitHub repos already indexed via "github".
+SOURCES = ["fdroid", "gitlab", "codeberg", "flathub", "winget", "github", "izzy"]
 
 
 def load_all_apps() -> list:
@@ -34,11 +36,11 @@ def load_all_apps() -> list:
         if not manifest_path.exists():
             print(f"  [skip] no manifest for {src}")
             continue
-        manifest = json.loads(manifest_path.read_text())
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         for n in range(1, manifest["pages"] + 1):
             page_path = DATA_DIR / "sources" / src / f"page-{n}.json"
             if page_path.exists():
-                all_apps.extend(json.loads(page_path.read_text()))
+                all_apps.extend(json.loads(page_path.read_text(encoding="utf-8")))
     return all_apps
 
 
@@ -60,7 +62,7 @@ def main():
     for src in SOURCES:
         manifest_path = DATA_DIR / "sources" / src / "manifest.json"
         if manifest_path.exists():
-            m = json.loads(manifest_path.read_text())
+            m = json.loads(manifest_path.read_text(encoding="utf-8"))
             counts[src] = m.get("total", 0)
         else:
             counts[src] = 0

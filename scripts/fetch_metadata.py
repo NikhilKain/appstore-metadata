@@ -35,10 +35,19 @@ Output layout
 import json
 import os
 import re
+import sys
 import time
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 import requests
+
+# Windows consoles default to a legacy codepage (cp1252) that can't print the
+# …/→ characters used in the log lines; force UTF-8 so local runs don't crash.
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except AttributeError:
+    pass
 
 # ---------------------------------------------------------------------------
 # CONFIG — tune these if needed
@@ -102,7 +111,9 @@ def get(url, headers=None, params=None, retries=4, pause=0):
 
 def write_json(path: Path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
+    # encoding must be explicit: Windows defaults write_text to the locale
+    # codec (cp1252), which crashes on emoji/CJK in app names.
+    path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
 
 def now_iso():

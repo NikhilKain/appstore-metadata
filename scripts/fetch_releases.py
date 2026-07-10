@@ -13,7 +13,15 @@ Add repos to github_repos.json at the root of this repository.
 
 import json
 import os
+import sys
 import time
+
+# Windows consoles default to cp1252, which can't print …/→ in log lines.
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except AttributeError:
+    pass
 from pathlib import Path
 import requests
 
