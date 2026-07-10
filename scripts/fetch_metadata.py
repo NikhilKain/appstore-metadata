@@ -37,7 +37,7 @@ import os
 import re
 import time
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import requests
 
 # ---------------------------------------------------------------------------
@@ -386,6 +386,80 @@ def fetch_github() -> list:
     entries.sort(key=lambda x: x["stars"], reverse=True)
     write_pages(DATA_DIR / "sources" / "github", entries, "github")
     print(f"[GitHub] Done — {len(entries):,} repos")
+    return entries
+
+
+# ---------------------------------------------------------------------------
+# Newly Launched — GitHub Android repos created in the last ~45 days
+# ---------------------------------------------------------------------------
+
+NEWLY_LAUNCHED_DAYS = 45     # window for "new" apps
+NEWLY_LAUNCHED_MAX  = 300    # shelf size cap
+
+def fetch_newly_launched() -> list:
+    print("\n[NewlyLaunched] Discovering recently created Android repos …")
+    cutoff  = (datetime.now(timezone.utc) - timedelta(days=NEWLY_LAUNCHED_DAYS)).strftime("%Y-%m-%d")
+    entries = []
+    seen    = set()
+
+    search_queries = [
+        f"topic:android created:>{cutoff}",
+        f"topic:android-app created:>{cutoff}",
+        f"android app apk in:description created:>{cutoff} stars:>1",
+    ]
+
+    for query in search_queries:
+        if len(entries) >= NEWLY_LAUNCHED_MAX:
+            break
+        print(f"  Query: {query!r}")
+        for page in range(1, 4):
+            if len(entries) >= NEWLY_LAUNCHED_MAX:
+                break
+            data = get(
+                "https://api.github.com/search/repositories",
+                headers=GITHUB_HDRS,
+                params={"q": query, "sort": "stars", "order": "desc", "per_page": 100, "page": page},
+                pause=GITHUB_DELAY,
+            )
+            if not data:
+                break
+            items = data.get("items", [])
+            if not items:
+                break
+            for repo in items:
+                rid = repo["id"]
+                if rid in seen:
+                    continue
+                seen.add(rid)
+                owner = repo["owner"]["login"]
+                rname = repo["name"]
+                # Same shape as fetch_github so the app's AppEntry mapping just works.
+                # source stays "github" — the shelf is defined by the directory key.
+                entries.append({
+                    "id":         f"github:{rid}",
+                    "source":     "github",
+                    "name":       rname,
+                    "summary":    (repo.get("description") or "")[:160],
+                    "icon":       repo["owner"].get("avatar_url", ""),
+                    "stars":      repo.get("stargazers_count", 0),
+                    "homepage":   repo.get("html_url", f"https://github.com/{owner}/{rname}"),
+                    "updated":    repo.get("updated_at"),
+                    "created":    repo.get("created_at"),
+                    "version":    "",
+                    "apk_url":    "",
+                    "categories": repo.get("topics", []),
+                    "license":    (repo.get("license") or {}).get("spdx_id", ""),
+                    "language":   repo.get("language") or "",
+                    "detail_url": f"data/detail/github/{owner}/{rname}.json",
+                })
+            if len(items) < 100:
+                break
+
+    # Newest first
+    entries.sort(key=lambda x: x.get("created") or "", reverse=True)
+    entries = entries[:NEWLY_LAUNCHED_MAX]
+    write_pages(DATA_DIR / "sources" / "newly-launched", entries, "newly-launched")
+    print(f"[NewlyLaunched] Done — {len(entries):,} repos")
     return entries
 
 
@@ -785,18 +859,20 @@ def main():
     wg = fetch_winget()
     gh = fetch_github()
     iz = fetch_izzy()
+    nl = fetch_newly_launched()   # pages only — kept out of the master index
 
     all_apps = fd + gl + cb + fh + wg + gh + iz
 
     build_index(all_apps)
     write_meta({
-        "fdroid":   len(fd),
-        "gitlab":   len(gl),
-        "codeberg": len(cb),
-        "flathub":  len(fh),
-        "winget":   len(wg),
-        "github":   len(gh),
-        "izzy":     len(iz),
+        "fdroid":         len(fd),
+        "gitlab":         len(gl),
+        "codeberg":       len(cb),
+        "flathub":        len(fh),
+        "winget":         len(wg),
+        "github":         len(gh),
+        "izzy":           len(iz),
+        "newly-launched": len(nl),
     })
     prefetch_details(all_apps)
 
