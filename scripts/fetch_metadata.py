@@ -93,6 +93,12 @@ def get(url, headers=None, params=None, retries=4, pause=0):
     for attempt in range(retries):
         try:
             r = _session.get(url, headers=headers or {}, params=params, timeout=30)
+            if r.status_code == 401 and headers and "Authorization" in headers:
+                # Expired/revoked token — drop it (mutates the shared header
+                # dict, so every later call also goes unauthenticated).
+                print(f"      [auth] token rejected (401) for {url} — continuing unauthenticated", flush=True)
+                del headers["Authorization"]
+                continue
             if r.status_code in (429, 403):
                 wait = int(r.headers.get("Retry-After", 60))
                 print(f"      [rate-limit] sleeping {wait}s …")
@@ -122,6 +128,29 @@ def now_iso():
 
 def slugify(text):
     return re.sub(r"[^a-z0-9\-_.]", "", str(text).lower().replace(" ", "-").replace("/", "-"))
+
+
+# ---------------------------------------------------------------------------
+# Junk filter — GitHub search surfaces docs/collections that are not
+# installable apps (interview questions, awesome-lists, setup guides …).
+# Name patterns are broad; description patterns only match strong phrases so
+# a real app described as "an awesome music player" survives.
+# ---------------------------------------------------------------------------
+
+NAME_JUNK = re.compile(
+    r"awesome|interview|roadmap|cheat.?sheet|leetcode|tutorial|guide|course|"
+    r"handbook|questions|e-?books?|wallpapers?$|-docs$|-notes$|study",
+    re.I,
+)
+DESC_JUNK = re.compile(
+    r"interview question|curated list|list of |collection of |cheat.?sheet|"
+    r"roadmap|tutorials?\b|setup guide|study plan|e-?books?|learning path|"
+    r"course material|sample code|code samples",
+    re.I,
+)
+
+def looks_like_app(name: str, summary: str) -> bool:
+    return not (NAME_JUNK.search(name or "") or DESC_JUNK.search(summary or ""))
 
 
 def write_pages(base_dir: Path, items: list, source: str):
@@ -375,11 +404,14 @@ def fetch_github() -> list:
                 seen.add(rid)
                 owner = repo["owner"]["login"]
                 rname = repo["name"]
+                summary = (repo.get("description") or "")[:160]
+                if not looks_like_app(rname, summary):
+                    continue
                 entries.append({
                     "id":         f"github:{rid}",
                     "source":     "github",
                     "name":       rname,
-                    "summary":    (repo.get("description") or "")[:160],
+                    "summary":    summary,
                     "icon":       repo["owner"].get("avatar_url", ""),
                     "stars":      repo.get("stargazers_count", 0),
                     "homepage":   repo.get("html_url", f"https://github.com/{owner}/{rname}"),
@@ -414,9 +446,9 @@ def fetch_newly_launched() -> list:
     seen    = set()
 
     search_queries = [
-        f"topic:android created:>{cutoff}",
-        f"topic:android-app created:>{cutoff}",
-        f"android app apk in:description created:>{cutoff} stars:>1",
+        f"topic:android created:>{cutoff} stars:>4",
+        f"topic:android-app created:>{cutoff} stars:>4",
+        f"android app apk in:description created:>{cutoff} stars:>9",
     ]
 
     for query in search_queries:
@@ -444,13 +476,16 @@ def fetch_newly_launched() -> list:
                 seen.add(rid)
                 owner = repo["owner"]["login"]
                 rname = repo["name"]
+                summary = (repo.get("description") or "")[:160]
+                if not looks_like_app(rname, summary):
+                    continue
                 # Same shape as fetch_github so the app's AppEntry mapping just works.
                 # source stays "github" — the shelf is defined by the directory key.
                 entries.append({
                     "id":         f"github:{rid}",
                     "source":     "github",
                     "name":       rname,
-                    "summary":    (repo.get("description") or "")[:160],
+                    "summary":    summary,
                     "icon":       repo["owner"].get("avatar_url", ""),
                     "stars":      repo.get("stargazers_count", 0),
                     "homepage":   repo.get("html_url", f"https://github.com/{owner}/{rname}"),

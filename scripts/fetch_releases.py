@@ -56,6 +56,13 @@ def get(url: str, params: dict = None):
             r = _session.get(url, params=params, timeout=20)
             if r.status_code == 404:
                 return None          # no releases or repo not found — skip silently
+            if r.status_code == 401 and "Authorization" in _session.headers:
+                # Expired/revoked GH_PAT: a bad token is worse than none —
+                # drop it for the whole session and retry unauthenticated.
+                print("  [auth] GH_PAT rejected (401) — falling back to unauthenticated requests. "
+                      "Regenerate the GH_PAT repository secret!", flush=True)
+                del _session.headers["Authorization"]
+                continue
             if r.status_code in (403, 429):
                 wait = int(r.headers.get("Retry-After", 60))
                 print(f"  [rate-limit] sleeping {wait}s …", flush=True)
