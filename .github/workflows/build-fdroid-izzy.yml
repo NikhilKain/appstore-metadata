@@ -1,0 +1,35 @@
+name: Build F-Droid + Izzy metadata
+
+# Adds F-Droid & IzzyOnDroid apps to data/index.json on your CDN.
+# Runs weekly and on manual trigger. Commit this to:
+#   .github/workflows/build-fdroid-izzy.yml
+# and put build_fdroid_izzy.py in  scripts/
+
+on:
+  workflow_dispatch:        # run manually from the Actions tab
+  schedule:
+    - cron: "0 4 * * 1"     # every Monday 04:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build F-Droid + Izzy JSON
+        run: python scripts/build_fdroid_izzy.py
+
+      - name: Commit updated metadata
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/index.json data/fdroid.json data/izzy.json
+          git diff --cached --quiet || git commit -m "chore: refresh F-Droid + Izzy metadata"
+          git push
