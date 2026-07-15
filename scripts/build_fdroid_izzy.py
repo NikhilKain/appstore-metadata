@@ -25,13 +25,19 @@ Deps:    only the Python standard library.
 import json, os, sys, urllib.request, gzip, io
 
 REPOS = [
-    # (source key, index-v2 url, repo base url for icons/apks)
-    ("fdroid", "https://f-droid.org/repo/index-v2.json",            "https://f-droid.org/repo"),
-    ("izzy",   "https://apt.izzysoft.de/fdroid/repo/index-v2.json", "https://apt.izzysoft.de/fdroid/repo"),
+    # (source key, repo base url, [index urls to try in order])
+    ("fdroid", "https://f-droid.org/repo", [
+        "https://f-droid.org/repo/index-v2.json",
+        "https://f-droid.org/repo/index-v1.json",
+    ]),
+    ("izzy", "https://apt.izzysoft.de/fdroid/repo", [
+        "https://apt.izzysoft.de/fdroid/repo/index-v2.json",
+        "https://apt.izzysoft.de/fdroid/repo/index-v1.json",
+    ]),
 ]
 
 # cap per source so the index stays lean; sorted by lastUpdated (newest first)
-MAX_PER_SOURCE = 800
+MAX_PER_SOURCE = 1500
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.normpath(os.path.join(HERE, "..", "data"))
@@ -67,14 +73,13 @@ def latest_version(pkg):
     return best, best.get("added", 0)
 
 
-def normalize(source, base, index):
+def normalize_v2(source, base, index):
     packages = index.get("packages") or {}
     rows = []
     for app_id, pkg in packages.items():
         meta = pkg.get("metadata") or {}
         name = en(meta.get("name")) or app_id
         summary = en(meta.get("summary")) or en(meta.get("description"))
-        # icon: metadata.icon → {"en-US": {"name": "/icons/..png"}}
         icon = ""
         ic = meta.get("icon")
         if isinstance(ic, dict):
@@ -91,19 +96,52 @@ def normalize(source, base, index):
             fn = (ver.get("file") or {}).get("name", "")
             if fn:
                 apk_url = base + fn
-        rows.append({
-            "id": f"{source}:{app_id}",
-            "source": source,
-            "name": name,
-            "summary": summary,
-            "icon": icon,
-            "stars": 0,                    # F-Droid/Izzy have no star metric
-            "homepage": homepage,
-            "apkUrl": apk_url,
-            "version": vname,
-            "_added": added,               # sort key, stripped before writing
-        })
-    rows.sort(key=lambda r: r["_added"], reverse=True)
+        rows.append(_row(source, app_id, name, summary, icon, homepage, apk_url, vname, added))
+    return rows
+
+
+def normalize_v1(source, base, index):
+    apps = index.get("apps") or []
+    pkgs = index.get("packages") or {}
+    rows = []
+    for app in apps:
+        app_id = app.get("packageName") or ""
+        loc = (app.get("localized") or {})
+        el = loc.get("en-US") or loc.get("en") or (next(iter(loc.values()), {}) if loc else {})
+        name = app.get("name") or el.get("name") or app_id
+        summary = app.get("summary") or el.get("summary") or app.get("description") or el.get("description") or ""
+        icon = ""
+        if el.get("icon"):
+            icon = f"{base}/{app_id}/en-US/{el['icon']}"
+        elif app.get("icon"):
+            icon = f"{base}/icons-640/{app['icon']}"
+        homepage = app.get("webSite") or app.get("sourceCode") or app.get("issueTracker") or ""
+        added = app.get("lastUpdated") or app.get("added") or 0
+        apk_url, vname = "", ""
+        plist = pkgs.get(app_id) or []
+        if plist:
+            best = max(plist, key=lambda v: v.get("added", 0))
+            vname = str(best.get("versionName", ""))
+            if best.get("apkName"):
+                apk_url = f"{base}/{best['apkName']}"
+        rows.append(_row(source, app_id, name, summary, icon, homepage, apk_url, vname, added))
+    return rows
+
+
+def _row(source, app_id, name, summary, icon, homepage, apk_url, vname, added):
+    return {
+        "id": f"{source}:{app_id}", "source": source, "name": name, "summary": summary,
+        "icon": icon, "stars": 0, "homepage": homepage, "apkUrl": apk_url,
+        "version": vname, "_added": added,
+    }
+
+
+def normalize(source, base, index):
+    if isinstance(index.get("apps"), list):
+        rows = normalize_v1(source, base, index)
+    else:
+        rows = normalize_v2(source, base, index)
+    rows.sort(key=lambda r: r["_added"] or 0, reverse=True)
     rows = rows[:MAX_PER_SOURCE]
     for r in rows:
         r.pop("_added", None)
@@ -114,10 +152,17 @@ def normalize(source, base, index):
 def main():
     os.makedirs(DATA, exist_ok=True)
     all_new = {}
-    for source, url, base in REPOS:
+    for source, base, urls in REPOS:
+        rows = []
+        for url in urls:
+            try:
+                idx = fetch_json(url)
+                rows = normalize(source, base, idx)
+                if rows:
+                    break
+            except Exception as e:
+                print(f"  … {url} failed: {e}", file=sys.stderr)
         try:
-            idx = fetch_json(url)
-            rows = normalize(source, base, idx)
             all_new[source] = rows
             with open(os.path.join(DATA, f"{source}.json"), "w", encoding="utf-8") as f:
                 json.dump(rows, f, ensure_ascii=False, indent=1)
