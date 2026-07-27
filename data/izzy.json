@@ -1,14 +1,509 @@
 [
  {
-  "id": "izzy:us.materialio.app",
+  "id": "izzy:xyz.tberghuis.floatingtimer",
   "source": "izzy",
-  "name": "Materialious",
-  "summary": "Modern material design for YouTube and Invidious.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/us.materialio.app/en-US/icon.png",
+  "name": "Floating Timer",
+  "summary": "Features both a countdown timer and stopwatch that will float over other apps.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/xyz.tberghuis.floatingtimer/en-US/icon.png",
   "stars": 0,
-  "homepage": "https://materialio.us/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/us.materialio.app_254.apk",
-  "version": "1.17.4"
+  "homepage": "https://github.com/tberghuis/FloatingCountdownTimer",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/xyz.tberghuis.floatingtimer_91.apk",
+  "version": "1.51.0"
+ },
+ {
+  "id": "izzy:org.onekash.kashcal",
+  "source": "izzy",
+  "name": "KashCal",
+  "summary": "All your calendars in one app. iCloud, CalDAV, device, ICS. Private.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/org.onekash.kashcal/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://kashcal.github.io/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.onekash.kashcal_690.apk",
+  "version": "2026.07.25"
+ },
+ {
+  "id": "izzy:io.github.sms2email.sms2email",
+  "source": "izzy",
+  "name": "SMS2Email",
+  "summary": "Forwards SMS messages to SMTP (Email) server",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/io.github.sms2email.sms2email/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/SMS2Email/SMS2Email",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/io.github.sms2email.sms2email_45.apk",
+  "version": "1.1.32"
+ },
+ {
+  "id": "izzy:eu.hxreborn.cleanshare",
+  "source": "izzy",
+  "name": "CleanShare",
+  "summary": "Xposed module to clean up Android's Share Sheet",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/eu.hxreborn.cleanshare/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/hxreborn/cleanshare",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/eu.hxreborn.cleanshare_314.apk",
+  "version": "3.1.4"
+ },
+ {
+  "id": "izzy:de.thomaskuenneth.benice",
+  "source": "izzy",
+  "name": "Be nice",
+  "summary": "Modern aesthetics. Open-source soul. Your Android launcher.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/de.thomaskuenneth.benice/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://codeberg.org/tkuenneth/benice",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.thomaskuenneth.benice_153.apk",
+  "version": "2.1.11"
+ },
+ {
+  "id": "izzy:com.vishal2376.snaptick",
+  "source": "izzy",
+  "name": "Snaptick",
+  "summary": "Boost your daily productivity with Snaptick 🚀",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.vishal2376.snaptick/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/vishal2376/snaptick",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.vishal2376.snaptick_14.apk",
+  "version": "4.2"
+ },
+ {
+  "id": "izzy:com.razeeman.util.simpletimetracker",
+  "source": "izzy",
+  "name": "Simple Time Tracker",
+  "summary": "Time tracker for work, study, and building better daily habits.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.razeeman.util.simpletimetracker/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/Razeeman/Android-SimpleTimeTracker",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.razeeman.util.simpletimetracker_143.apk",
+  "version": "1.59"
+ },
+ {
+  "id": "izzy:com.openappslabs.coffee",
+  "source": "izzy",
+  "name": "Coffee",
+  "summary": "Coffee - A lightweight app that prevents your screen from dimming or locking.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.openappslabs.coffee/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/OpenAppsLabs/Coffee",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.openappslabs.coffee_5.apk",
+  "version": "1.4.0"
+ },
+ {
+  "id": "izzy:com.kel.powerlifting",
+  "source": "izzy",
+  "name": "Kelani SBD Tracker",
+  "summary": "Offline-first powerlifting tracker for Squat, Bench and Deadlift.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.kel.powerlifting/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/mburgosfr-star/kelani-sbd-tracker",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.kel.powerlifting_90.apk",
+  "version": "1.4.1"
+ },
+ {
+  "id": "izzy:com.je.dejpeg",
+  "source": "izzy",
+  "name": "DeJPEG",
+  "summary": "An offline image compression and noise remover",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.je.dejpeg/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://codeberg.org/dryerlint/dejpeg",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.je.dejpeg_410.apk",
+  "version": "4.1.0"
+ },
+ {
+  "id": "izzy:acab.naiveha.subrosa",
+  "source": "izzy",
+  "name": "sub rosa by naiveHA",
+  "summary": "Program the static password and/or OpenPGP keys to your hardware security key",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/acab.naiveha.subrosa/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/naive-HA/subrosa",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/acab.naiveha.subrosa_11.apk",
+  "version": "2.3.0"
+ },
+ {
+  "id": "izzy:it.fast4x.riplay",
+  "source": "izzy",
+  "name": "RiPlay",
+  "summary": "Multiplatform Music Player",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/it.fast4x.riplay/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/fast4x/RiPlay",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/it.fast4x.riplay_87.apk",
+  "version": "0.7.86"
+ },
+ {
+  "id": "izzy:dev.dettmer.simplenotes",
+  "source": "izzy",
+  "name": "Simple Notes Sync",
+  "summary": "Offline notes & checklists, self-hosted sync. Under 5 MB, no ads, no tracking.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.dettmer.simplenotes/de-DE/icon.png",
+  "stars": 0,
+  "homepage": "https://dettmer.dev/projects/simple-notes/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.dettmer.simplenotes_48.apk",
+  "version": "2.13.1"
+ },
+ {
+  "id": "izzy:dev.bg.bikebridge",
+  "source": "izzy",
+  "name": "BikeBridge",
+  "summary": "Companion app for e-bikes and components",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.bg.bikebridge/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://codeberg.org/bg443/BikeBridge",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.bg.bikebridge_8.apk",
+  "version": "0.1.1"
+ },
+ {
+  "id": "izzy:com.viscouspot.gitsync",
+  "source": "izzy",
+  "name": "GitSync",
+  "summary": "Git client for syncing a repository between remote and a local directory",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.viscouspot.gitsync/ar/icon.png",
+  "stars": 0,
+  "homepage": "https://gitsync.viscouspotenti.al/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.viscouspot.gitsync_18612.apk",
+  "version": "1.8.61"
+ },
+ {
+  "id": "izzy:com.thirtytwo.steps",
+  "source": "izzy",
+  "name": "32steps",
+  "summary": "Custom volume steps, headphone EQ, and graphic equalizer for Android",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.thirtytwo.steps/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/nulldio/32steps",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.thirtytwo.steps_35.apk",
+  "version": "2.2.11"
+ },
+ {
+  "id": "izzy:com.svenjacobs.app.leon",
+  "source": "izzy",
+  "name": "Léon – The URL Cleaner",
+  "summary": "Removes tracking & other redundant parameters from web links for sharing",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.svenjacobs.app.leon/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/leon-cleaning-services/leon",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.svenjacobs.app.leon_280.apk",
+  "version": "59"
+ },
+ {
+  "id": "izzy:com.serranoie.app.minus",
+  "source": "izzy",
+  "name": "Minus",
+  "summary": "Register expenses, calculate and make reminders for your recurring expenses",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.serranoie.app.minus/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/isaacsa51/Minus",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.serranoie.app.minus_10309.apk",
+  "version": "1.3.9"
+ },
+ {
+  "id": "izzy:com.perol.pixez",
+  "source": "izzy",
+  "name": "PixEz",
+  "summary": "A third-party Pixiv flutter client that supports viewing ugoira",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.perol.pixez/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/Notsfsssf/pixez-flutter",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.perol.pixez_10010050.apk",
+  "version": "0.9.105 lun"
+ },
+ {
+  "id": "izzy:com.likhithpraveenk.storii",
+  "source": "izzy",
+  "name": "Storii - audiobookshelf client",
+  "summary": "Audiobookshelf client with offline downloads and background playback",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.likhithpraveenk.storii/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/likhithpraveenk/storii",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.likhithpraveenk.storii_5022.apk",
+  "version": "0.5.12"
+ },
+ {
+  "id": "izzy:com.hardbacknutter.nevertoomanybooks",
+  "source": "izzy",
+  "name": "NeverTooManyBooks",
+  "summary": "keep track of your books and comics",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.hardbacknutter.nevertoomanybooks/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/tfonteyn/NeverTooManyBooks",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.hardbacknutter.nevertoomanybooks_125.apk",
+  "version": "8.0.0"
+ },
+ {
+  "id": "izzy:com.fixupxer",
+  "source": "izzy",
+  "name": "FixupXer - URL Enhancer",
+  "summary": "Clean URL tracking, fix embeds (X, IG, FB, TikTok, Bluesky), catch link leaks",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.fixupxer/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/NeatCode-Labs/fixupxer",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.fixupxer_43.apk",
+  "version": "2.6.1"
+ },
+ {
+  "id": "izzy:com.eyalm.adns",
+  "source": "izzy",
+  "name": "ADNS",
+  "summary": "Private DNS Supercharged",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.eyalm.adns/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/eyalm2000/adns",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.eyalm.adns_12.apk",
+  "version": "2.0.0-beta3.2"
+ },
+ {
+  "id": "izzy:com.ericlowry.dnstoggle",
+  "source": "izzy",
+  "name": "DNS Toggle",
+  "summary": "Easily toggle and automate Private DNS through the Quick Settings panel.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.ericlowry.dnstoggle/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/ELowry/DNSToggle",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.ericlowry.dnstoggle_21.apk",
+  "version": "1.7.1"
+ },
+ {
+  "id": "izzy:com.eblan.launcher",
+  "source": "izzy",
+  "name": "Yagni Launcher",
+  "summary": "Only 2 MB Android Launcher, total control, zero bloat, zero tracking",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.eblan.launcher/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/JackEblan/YagniLauncher",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.eblan.launcher_86.apk",
+  "version": "0.8.6-alpha"
+ },
+ {
+  "id": "izzy:com.demizo.daily_you",
+  "source": "izzy",
+  "name": "Daily You",
+  "summary": "Every day is worth remembering…",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.demizo.daily_you/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/Demizo/Daily_You",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.demizo.daily_you_20260032.apk",
+  "version": "2.26.3"
+ },
+ {
+  "id": "izzy:com.bnyro.wallpaper",
+  "source": "izzy",
+  "name": "Wall You",
+  "summary": "Privacy focused wallpaper app built with MD3",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.bnyro.wallpaper/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/you-apps/WallYou",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.bnyro.wallpaper_41.apk",
+  "version": "16.0"
+ },
+ {
+  "id": "izzy:cgeo.geocaching",
+  "source": "izzy",
+  "name": "c:geo",
+  "summary": "powerful geocaching app",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/cgeo.geocaching/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://www.cgeo.org/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/cgeo.geocaching_20260725.apk",
+  "version": "2026.07.25"
+ },
+ {
+  "id": "izzy:org.wisso.newpipematerial",
+  "source": "izzy",
+  "name": "WizeStream",
+  "summary": "A Material 3-focused streaming app based on NewPipe.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/org.wisso.newpipematerial/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/wizdom13/WizeStream",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.wisso.newpipematerial_1000000.apk",
+  "version": "1.0.0"
+ },
+ {
+  "id": "izzy:org.gonbei774.pocketcheck",
+  "source": "izzy",
+  "name": "PocketCheck",
+  "summary": "A working memory app - \"Anything to put in your pocket?\"",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/org.gonbei774.pocketcheck/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://codeberg.org/Gonbei774/PocketCheck",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.gonbei774.pocketcheck_19.apk",
+  "version": "1.9.0"
+ },
+ {
+  "id": "izzy:org.courville.nova",
+  "source": "izzy",
+  "name": "Nova Video Player",
+  "summary": "Video player for local/network content with subtitle/metadata download support",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/org.courville.nova/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://www.reddit.com/r/NovaVideoPlayer",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.courville.nova_2665404.apk",
+  "version": "6.4.42-20260724.0920"
+ },
+ {
+  "id": "izzy:org.akanework.gramophone",
+  "source": "izzy",
+  "name": "Gramophone",
+  "summary": "Simple offline music player with minimalistic design",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/org.akanework.gramophone/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/FoedusProgramme/Gramophone",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.akanework.gramophone_23.apk",
+  "version": "1.1.1"
+ },
+ {
+  "id": "izzy:dev.robin.privacify",
+  "source": "izzy",
+  "name": "Privacify",
+  "summary": "Privacy control center — monitor permissions, track sensors, kill switches.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.robin.privacify/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/robinsrk/privacify",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.robin.privacify_26.apk",
+  "version": "2.6"
+ },
+ {
+  "id": "izzy:deckers.thibault.aves",
+  "source": "izzy",
+  "name": "Aves",
+  "summary": "Gallery and metadata explorer",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/deckers.thibault.aves/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/deckerst/aves",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/deckers.thibault.aves_17302.apk",
+  "version": "1.14.9"
+ },
+ {
+  "id": "izzy:de.kaffeemitkoffein.tinyweatherforecastgermany",
+  "source": "izzy",
+  "name": "Tiny Weather Forecast Germany",
+  "summary": "Weather forecast based on open data from the Deutscher Wetterdienst.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/de.kaffeemitkoffein.tinyweatherforecastgermany/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://codeberg.org/Starfish/TinyWeatherForecastGermany",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.kaffeemitkoffein.tinyweatherforecastgermany_63.apk",
+  "version": "0.63.4"
+ },
+ {
+  "id": "izzy:com.trustdevice.android.demo",
+  "source": "izzy",
+  "name": "TrustDevice Fingerprint",
+  "summary": "determining device uniqueness and risk identification",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.trustdevice.android.demo/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/trustdecision/trustdevice-android",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.trustdevice.android.demo_115.apk",
+  "version": "1.1.5"
+ },
+ {
+  "id": "izzy:com.rve.systemmonitor",
+  "source": "izzy",
+  "name": "RvSystem Monitor",
+  "summary": "High-performance system monitoring for Android.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.rve.systemmonitor/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/Rve27/RvSystem-Monitor",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.rve.systemmonitor_8.apk",
+  "version": "0.8-beta"
+ },
+ {
+  "id": "izzy:com.pg_axis.ytcnv",
+  "source": "izzy",
+  "name": "YouTube Conv.axs",
+  "summary": "Download YouTube videos as MP3 or MP4 with metadata and thumbnail embedding",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.pg_axis.ytcnv/cs-CZ/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/PGAxis/YTCnv",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.pg_axis.ytcnv_68.apk",
+  "version": "3.15.2"
+ },
+ {
+  "id": "izzy:com.github.enteraname74.soulsearching",
+  "source": "izzy",
+  "name": "Soul Searching",
+  "summary": "A complete and powerful music player for Android.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.github.enteraname74.soulsearching/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/enteraname74/SoulSearching",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.github.enteraname74.soulsearching_38.apk",
+  "version": "0.15.2"
+ },
+ {
+  "id": "izzy:com.darkrockstudios.apps.hammer.android",
+  "source": "izzy",
+  "name": "Hammer",
+  "summary": "A simple tool for building stories.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.darkrockstudios.apps.hammer.android/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/Darkrock-Studios/hammer-editor",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.darkrockstudios.apps.hammer.android_307010000.apk",
+  "version": "3.7.1"
+ },
+ {
+  "id": "izzy:com.catpuppyapp.puppygit.play.pro",
+  "source": "izzy",
+  "name": "PuppyGit",
+  "summary": "A Modern Git Client For Android",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.catpuppyapp.puppygit.play.pro/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/catpuppyapp/PuppyGit",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.catpuppyapp.puppygit.play.pro_131.apk",
+  "version": "1.1.5.5"
+ },
+ {
+  "id": "izzy:com.catpuppyapp.hahanote",
+  "source": "izzy",
+  "name": "HahaNote",
+  "summary": "A cross-platform note-taking app, supports E2EE sync",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.catpuppyapp.hahanote/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/catpuppyapp/HahaNote-Release",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.catpuppyapp.hahanote_2008.apk",
+  "version": "1.0.7"
+ },
+ {
+  "id": "izzy:com.castle.sefirah",
+  "source": "izzy",
+  "name": "Sefirah",
+  "summary": "Seamlessly integrate your phone to Windows devices",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.castle.sefirah/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/shrimqy/Sefirah-Android",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.castle.sefirah_34.apk",
+  "version": "3.0.1"
+ },
+ {
+  "id": "izzy:app.simple.inure",
+  "source": "izzy",
+  "name": "Inure App Manager (Trial)",
+  "summary": "Fast, refined app manager for power users, with root and Shizuku support.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/app.simple.inure/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/Hamza417/Inure",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/app.simple.inure_10720.apk",
+  "version": "build107.2.0"
+ },
+ {
+  "id": "izzy:com.thinkdifferent.anywebview",
+  "source": "izzy",
+  "name": "AnyWebView",
+  "summary": "Any WebView is OK!",
+  "icon": "",
+  "stars": 0,
+  "homepage": "https://github.com/neoblackxt/AnyWebView",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.thinkdifferent.anywebview_5.apk",
+  "version": "1.4"
+ },
+ {
+  "id": "izzy:com.j.m3play",
+  "source": "izzy",
+  "name": "M3Play",
+  "summary": "Material 3 music player with streaming, offline & song recognition",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.j.m3play/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://m3-play.vercel.app/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.j.m3play_143.apk",
+  "version": "3.1.0"
  },
  {
   "id": "izzy:tech.techlore.plexus",
@@ -18,8 +513,217 @@
   "icon": "https://apt.izzysoft.de/fdroid/repo/tech.techlore.plexus/en-US/icon.png",
   "stars": 0,
   "homepage": "https://plexus.techlore.tech/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/tech.techlore.plexus_219.apk",
-  "version": "2.1.9"
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/tech.techlore.plexus_220.apk",
+  "version": "2.2.0"
+ },
+ {
+  "id": "izzy:org.kaorun.nouto",
+  "source": "izzy",
+  "name": "Nouto",
+  "summary": "Android app for taking notes with Rich Text Editor features support",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/org.kaorun.nouto/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/HotarunIchijou/Nouto",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.kaorun.nouto_3.apk",
+  "version": "1.2.0"
+ },
+ {
+  "id": "izzy:dev.pgaxis.musicaxs",
+  "source": "izzy",
+  "name": "Music.axs",
+  "summary": "Free and open-source music player",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.pgaxis.musicaxs/cs-CZ/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/PGAxis/MusicPlayer",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.pgaxis.musicaxs_29.apk",
+  "version": "1.12.0"
+ },
+ {
+  "id": "izzy:dev.chuk.betterbahn",
+  "source": "izzy",
+  "name": "Besser Bahn",
+  "summary": "find cheaper split ticket options for Deutsche Bahn connections",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.chuk.betterbahn/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/chukfinley/Besser-Bahn",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.chuk.betterbahn_22200.apk",
+  "version": "2.2.0"
+ },
+ {
+  "id": "izzy:com.zaneschepke.wireguardautotunnel",
+  "source": "izzy",
+  "name": "WG Tunnel",
+  "summary": "A WireGuard & AmneziaWG VPN client with auto-tunneling, lockdown & proxying.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.zaneschepke.wireguardautotunnel/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://wgtunnel.com/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.zaneschepke.wireguardautotunnel_50201.apk",
+  "version": "5.2.1"
+ },
+ {
+  "id": "izzy:com.vishaltelangre.nerdcalci",
+  "source": "izzy",
+  "name": "NerdCalci",
+  "summary": "Calculator for nerds with variables, syntax highlighting, and file sessions",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.vishaltelangre.nerdcalci/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/vishaltelangre/NerdCalci",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.vishaltelangre.nerdcalci_494.apk",
+  "version": "4.9.4"
+ },
+ {
+  "id": "izzy:com.valhalla.thor",
+  "source": "izzy",
+  "name": "Thor - App Manager",
+  "summary": "Freeze, debloat, & install apps via Shizuku, Root & Dhizuku. 100% offline & FOSS",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.valhalla.thor/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/trinadhthatakula/Thor",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.valhalla.thor_1930.apk",
+  "version": "1.93.0-foss"
+ },
+ {
+  "id": "izzy:com.steel101.wearsyncforbreezy",
+  "source": "izzy",
+  "name": "Wear Sync for Breezy",
+  "summary": "send Breezy weather data from your phone to your Wear OS watch",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.steel101.wearsyncforbreezy/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/steel101/Wear-Sync-for-Breezy",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.steel101.wearsyncforbreezy_30.apk",
+  "version": "1.0.66"
+ },
+ {
+  "id": "izzy:com.steel101.musicplayer",
+  "source": "izzy",
+  "name": "music player auto",
+  "summary": "music player that auto pulls art work",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.steel101.musicplayer/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/steel101/music-player-",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.steel101.musicplayer_13.apk",
+  "version": "1.0.13"
+ },
+ {
+  "id": "izzy:com.dresos.dressecurecomms",
+  "source": "izzy",
+  "name": "DresSecureComms",
+  "summary": "De-Googled secure comms: private SMS, calls, contacts, spam shield, file scan.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.dresos.dressecurecomms/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/DresOperatingSystems/DresSecureComms",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.dresos.dressecurecomms_11.apk",
+  "version": "1.8.0"
+ },
+ {
+  "id": "izzy:com.deliacheminot.mona",
+  "source": "izzy",
+  "name": "Mona - HRT journal",
+  "summary": "Your hormonal journal",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.deliacheminot.mona/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/mona-hrt/mona",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.deliacheminot.mona_2018.apk",
+  "version": "1.16.0"
+ },
+ {
+  "id": "izzy:com.daniebeler.pfpixelix",
+  "source": "izzy",
+  "name": "Pixelix",
+  "summary": "A mobile client for Pixelfed and Vernissage",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.daniebeler.pfpixelix/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://pixelix.vercel.app/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.daniebeler.pfpixelix_43.apk",
+  "version": "5.0.1"
+ },
+ {
+  "id": "izzy:com.cuscus.wifiaudiostreaming",
+  "source": "izzy",
+  "name": "WiFi Audio Streaming",
+  "summary": "Stream audio over your local network",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.cuscus.wifiaudiostreaming/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://gitlab.com/marcomorosi.dev/wifiaudiostreaming-android",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.cuscus.wifiaudiostreaming_9.apk",
+  "version": "1.1.0"
+ },
+ {
+  "id": "izzy:com.crazyunicorn.simplequizfr",
+  "source": "izzy",
+  "name": "Simple Quiz FR",
+  "summary": "French quizzes featuring filtering by category or difficulty, and quiz creation",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.crazyunicorn.simplequizfr/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://codeberg.org/Crazy_Unicorn/simple_quiz_fr",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.crazyunicorn.simplequizfr_13.apk",
+  "version": "2026.07.23"
+ },
+ {
+  "id": "izzy:com.cliambrown.pilltime",
+  "source": "izzy",
+  "name": "Pill Time",
+  "summary": "Keep track of meds that can be taken as needed (not at a specific time)",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.cliambrown.pilltime/en-CA/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/cliambrown/PillTime",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.cliambrown.pilltime_20.apk",
+  "version": "20.0"
+ },
+ {
+  "id": "izzy:app.lonecloud.prism",
+  "source": "izzy",
+  "name": "Prism",
+  "summary": "Privacy-first UnifiedPush distributor with an optional self-hosted server",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/app.lonecloud.prism/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://git.lonecloud.dev/lone-cloud/prism-android",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/app.lonecloud.prism_10302.apk",
+  "version": "1.3.2"
+ },
+ {
+  "id": "izzy:InfinityLoop1309.NewPipeEnhanced",
+  "source": "izzy",
+  "name": "PipePipe",
+  "summary": "A FLOSS Android app to let you browse YouTube, NicoNico and BiliBili freely.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/InfinityLoop1309.NewPipeEnhanced/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/InfinityLoop1308/PipePipe",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/InfinityLoop1309.NewPipeEnhanced_110504.apk",
+  "version": "5.2.4"
+ },
+ {
+  "id": "izzy:uk.nktnet.webviewkiosk",
+  "source": "izzy",
+  "name": "Webview Kiosk",
+  "summary": "Turn your Android device into a locked-down web page in fullscreen mode.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/uk.nktnet.webviewkiosk/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://webviewkiosk.nktnet.uk/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/uk.nktnet.webviewkiosk_132.apk",
+  "version": "0.26.18"
+ },
+ {
+  "id": "izzy:su.comp.bk",
+  "source": "izzy",
+  "name": "BkEmu",
+  "summary": "Elektronika BK-0010/11M Emulator",
+  "icon": "",
+  "stars": 0,
+  "homepage": "https://github.com/3cky/bkemu-android",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/su.comp.bk_1002002.apk",
+  "version": "1.2.2"
+ },
+ {
+  "id": "izzy:shub39.momentum",
+  "source": "izzy",
+  "name": "Momentum",
+  "summary": "App to make Montages easily",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/shub39.momentum/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/shub39/Momentum",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/shub39.momentum_1830.apk",
+  "version": "1.8.3"
  },
  {
   "id": "izzy:ru.application.homemedkit",
@@ -29,8 +733,338 @@
   "icon": "https://apt.izzysoft.de/fdroid/repo/ru.application.homemedkit/en-US/icon.png",
   "stars": 0,
   "homepage": "https://github.com/pewaru-333/HomeMedkit-App",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/ru.application.homemedkit_73.apk",
-  "version": "1.9.8"
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/ru.application.homemedkit_74.apk",
+  "version": "1.9.9"
+ },
+ {
+  "id": "izzy:rkr.simplekeyboard.inputmethod",
+  "source": "izzy",
+  "name": "Simple Keyboard",
+  "summary": "An app for those who only need a keyboard and nothing more",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/rkr.simplekeyboard.inputmethod/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/rkkr/simple-keyboard",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/rkr.simplekeyboard.inputmethod_146.apk",
+  "version": "6.5"
+ },
+ {
+  "id": "izzy:org.swlabs.fireflynotes",
+  "source": "izzy",
+  "name": "Firefly Notes",
+  "summary": "Simple notes app that deletes notes after 24 hours",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/org.swlabs.fireflynotes/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://codeberg.org/SWLabs/fireflynotesapk",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.swlabs.fireflynotes_14.apk",
+  "version": "v1.4"
+ },
+ {
+  "id": "izzy:org.schabi.newpipe",
+  "source": "izzy",
+  "name": "NewPipe",
+  "summary": "A free lightweight YouTube frontend for Android.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/org.schabi.newpipe/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://newpipe.net",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.schabi.newpipe_1014.apk",
+  "version": "0.29.0"
+ },
+ {
+  "id": "izzy:io.github.friesi23.mhabit",
+  "source": "izzy",
+  "name": "Table Habit",
+  "summary": "Boost your own habit growth with charts.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/io.github.friesi23.mhabit/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/FriesI23/mhabit",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/io.github.friesi23.mhabit_2174.apk",
+  "version": "1.26.1"
+ },
+ {
+  "id": "izzy:de.ntdote.medicalcalendarlog",
+  "source": "izzy",
+  "name": "Medical Calendar Log",
+  "summary": "Privacy-focused medical event tracking using your device's calendar system",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/de.ntdote.medicalcalendarlog/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://codeberg.org/svewa/MedicalCalendarLog",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.ntdote.medicalcalendarlog_50.apk",
+  "version": "2.0.7"
+ },
+ {
+  "id": "izzy:de.kaiserdragon.callforwardingstatus",
+  "source": "izzy",
+  "name": "CallForwardingStatus",
+  "summary": "Simply forward your calls",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/de.kaiserdragon.callforwardingstatus/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/Kaiserdragon2/CallForwarding",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.kaiserdragon.callforwardingstatus_9.apk",
+  "version": "2.2"
+ },
+ {
+  "id": "izzy:com.zell_mbc.medilog",
+  "source": "izzy",
+  "name": "MediLog",
+  "summary": "Log health metrics such as blood pressure, weight and quite a few others",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.zell_mbc.medilog/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://codeberg.org/toz/MediLog",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.zell_mbc.medilog_5528.apk",
+  "version": "3.7.2"
+ },
+ {
+  "id": "izzy:com.tomclaw.appsend",
+  "source": "izzy",
+  "name": "Appteka",
+  "summary": "alternative app store",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.tomclaw.appsend/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/solkin/appteka-android",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.tomclaw.appsend_1092.apk",
+  "version": "21.0"
+ },
+ {
+  "id": "izzy:app.flicky",
+  "source": "izzy",
+  "name": "Flicky",
+  "summary": "Unofficial Fdroid client (for Android TV)",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/app.flicky/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/mlm-games/flicky",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/app.flicky_951.apk",
+  "version": "4.4.3"
+ },
+ {
+  "id": "izzy:org.woheller69.exifedit",
+  "source": "izzy",
+  "name": "ExifEdit",
+  "summary": "Simple EXIF Editor for Android: Delete EXIF, Modify date",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/org.woheller69.exifedit/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/woheller69/exifedit",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.woheller69.exifedit_14.apk",
+  "version": "1.4"
+ },
+ {
+  "id": "izzy:ir.ammari.nodelook",
+  "source": "izzy",
+  "name": "NodeLook",
+  "summary": "A general website checker for users facing internet restrictions.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/ir.ammari.nodelook/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://nodelook.github.io/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/ir.ammari.nodelook_6.apk",
+  "version": "1.5.0"
+ },
+ {
+  "id": "izzy:eu.faircode.email",
+  "source": "izzy",
+  "name": "FairEmail",
+  "summary": "FairEmail - Fully featured, open source, privacy oriented email app for Android",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/eu.faircode.email/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://email.faircode.eu/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/eu.faircode.email_2326.apk",
+  "version": "1.2326"
+ },
+ {
+  "id": "izzy:de.michelinside.glucodatahandler",
+  "source": "izzy",
+  "name": "GlucoDataHandler",
+  "summary": "Your central hub for glucose readings on your Android devices!",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/de.michelinside.glucodatahandler/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/pachi81/GlucoDataHandler",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.michelinside.glucodatahandler_1196.apk",
+  "version": "2.4.2"
+ },
+ {
+  "id": "izzy:de.bahnhoefe.deutschlands.bahnhofsfotos",
+  "source": "izzy",
+  "name": "Railway station photos",
+  "summary": "Collect photos of railway stations for https://railway-stations.org",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/de.bahnhoefe.deutschlands.bahnhofsfotos/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://railway-stations.org/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.bahnhoefe.deutschlands.bahnhofsfotos_98.apk",
+  "version": "16.5.0"
+ },
+ {
+  "id": "izzy:com.ztftrue.music",
+  "source": "izzy",
+  "name": "MonsterMusic",
+  "summary": "A Music Player with Equalizer and more",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.ztftrue.music/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/ZTFtrue/MonsterMusic",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.ztftrue.music_71.apk",
+  "version": "0.1.71"
+ },
+ {
+  "id": "izzy:com.shub39.rush",
+  "source": "izzy",
+  "name": "Rush - Lyrics App",
+  "summary": "App to search, view, save and share lyrics",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.shub39.rush/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/shub39/Rush",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.shub39.rush_6510.apk",
+  "version": "6.5.1"
+ },
+ {
+  "id": "izzy:com.shub39.grit",
+  "source": "izzy",
+  "name": "Grit",
+  "summary": "A Simple ToDo List and Habit Tracker",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.shub39.grit/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/shub39/Grit",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.shub39.grit_6050.apk",
+  "version": "6.0.5"
+ },
+ {
+  "id": "izzy:com.jerboa",
+  "source": "izzy",
+  "name": "Jerboa for Lemmy",
+  "summary": "An app for Lemmy, a federated reddit alternative.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.jerboa/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/LemmyNet/jerboa",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.jerboa_88.apk",
+  "version": "0.0.88-fdroid"
+ },
+ {
+  "id": "izzy:com.github.stsaz.phiola",
+  "source": "izzy",
+  "name": "phiola",
+  "summary": "Fast audio player, recorder, converter",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.github.stsaz.phiola/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/stsaz/phiola",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.github.stsaz.phiola_20811.apk",
+  "version": "2.8.11"
+ },
+ {
+  "id": "izzy:com.boxlabs.hexdroid",
+  "source": "izzy",
+  "name": "HexDroid IRC",
+  "summary": "A lightweight, modern IRC client for Android",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.boxlabs.hexdroid/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://hexdroid.boxlabs.uk/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.boxlabs.hexdroid_25.apk",
+  "version": "1.6.9"
+ },
+ {
+  "id": "izzy:org.tagspaces.mobileapp",
+  "source": "izzy",
+  "name": "TagSpaces – Your versatile file organizer",
+  "summary": "organize, tag and browse your files, photos and documents",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/org.tagspaces.mobileapp/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://www.tagspaces.org/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.tagspaces.mobileapp_61312.apk",
+  "version": "6.13.12"
+ },
+ {
+  "id": "izzy:io.github.gonbei774.calisthenicsmemory",
+  "source": "izzy",
+  "name": "Calisthenics Memory",
+  "summary": "Bodyweight workout tracker - create and customize your own exercises",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/io.github.gonbei774.calisthenicsmemory/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://codeberg.org/Gonbei774/CalisthenicsMemory",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/io.github.gonbei774.calisthenicsmemory_35.apk",
+  "version": "1.26.0"
+ },
+ {
+  "id": "izzy:dev.mi6e4ka.openstore",
+  "source": "izzy",
+  "name": "OpenStore",
+  "summary": "Libre client for popular russian app store",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.mi6e4ka.openstore/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://codeberg.org/mi6e4ka/openstore",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.mi6e4ka.openstore_10981418.apk",
+  "version": "2.2.3"
+ },
+ {
+  "id": "izzy:dev.imranr.obtainium",
+  "source": "izzy",
+  "name": "Obtainium",
+  "summary": "Get Android app updates directly from the source",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.imranr.obtainium/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/ImranR98/Obtainium/wiki",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.imranr.obtainium_23493.apk",
+  "version": "1.6.10"
+ },
+ {
+  "id": "izzy:com.sunilpaulmathew.snotz",
+  "source": "izzy",
+  "name": "sNotz",
+  "summary": "An open-source and completely offline application to manage simple notes",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.sunilpaulmathew.snotz/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/sunilpaulmathew/sNotz",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.sunilpaulmathew.snotz_35.apk",
+  "version": "v0.35"
+ },
+ {
+  "id": "izzy:com.sobuumedia.sobuu",
+  "source": "izzy",
+  "name": "Sobuu",
+  "summary": "Track books reading and organise your readings",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.sobuumedia.sobuu/de/icon.png",
+  "stars": 0,
+  "homepage": "https://getsobuu.com",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.sobuumedia.sobuu_14.apk",
+  "version": "1.4.4"
+ },
+ {
+  "id": "izzy:com.ki_bun.pioneer",
+  "source": "izzy",
+  "name": "Pioneer",
+  "summary": "Open source universal progress tracker",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.ki_bun.pioneer/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/ki-bun/Pioneer",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.ki_bun.pioneer_11.apk",
+  "version": "2.4.0"
+ },
+ {
+  "id": "izzy:com.harsh.shah.saavnmp3",
+  "source": "izzy",
+  "name": "Melotune",
+  "summary": "a clean, ad-free Android music streaming app",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.harsh.shah.saavnmp3/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/Harshshah6/SaavnMp3-Android",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.harsh.shah.saavnmp3_12.apk",
+  "version": "1.0.18"
+ },
+ {
+  "id": "izzy:com.eddyizm.degoogled.tempus",
+  "source": "izzy",
+  "name": "Tempus",
+  "summary": "An open-source and privacy focused music client for Subsonic",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.eddyizm.degoogled.tempus/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://eddyizm.github.io/tempus/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.eddyizm.degoogled.tempus_38.apk",
+  "version": "4.22.2"
+ },
+ {
+  "id": "izzy:us.materialio.app",
+  "source": "izzy",
+  "name": "Materialious",
+  "summary": "Modern material design for YouTube and Invidious.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/us.materialio.app/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://materialio.us/",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/us.materialio.app_254.apk",
+  "version": "1.17.4"
  },
  {
   "id": "izzy:org.fossify.messages",
@@ -88,17 +1122,6 @@
   "version": "0.17.3"
  },
  {
-  "id": "izzy:com.ztftrue.music",
-  "source": "izzy",
-  "name": "MonsterMusic",
-  "summary": "A Music Player with Equalizer and more",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.ztftrue.music/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/ZTFtrue/MonsterMusic",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.ztftrue.music_70.apk",
-  "version": "0.1.70"
- },
- {
   "id": "izzy:com.rajmani7584.payloaddumper",
   "source": "izzy",
   "name": "Payload Dumper",
@@ -141,17 +1164,6 @@
   "homepage": "https://github.com/maxrave-dev/SimpMusic",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.maxrave.simpmusic_55.apk",
   "version": "1.6.0"
- },
- {
-  "id": "izzy:com.kel.powerlifting",
-  "source": "izzy",
-  "name": "Kelani SBD Tracker",
-  "summary": "Offline-first powerlifting tracker for Squat, Bench and Deadlift.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.kel.powerlifting/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/mburgosfr-star/kelani-sbd-tracker",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.kel.powerlifting_83.apk",
-  "version": "1.3.20"
  },
  {
   "id": "izzy:com.kaleedtc.privacium",
@@ -209,17 +1221,6 @@
   "version": "3.17"
  },
  {
-  "id": "izzy:com.daniebeler.pfpixelix",
-  "source": "izzy",
-  "name": "Pixelix",
-  "summary": "A mobile client for Pixelfed and Vernissage",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.daniebeler.pfpixelix/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://pixelix.vercel.app/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.daniebeler.pfpixelix_42.apk",
-  "version": "5.0.0"
- },
- {
   "id": "izzy:at.bitfire.davdroid",
   "source": "izzy",
   "name": "DAVx⁵",
@@ -240,39 +1241,6 @@
   "homepage": "https://github.com/k4ustu3h/monocons-android",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/k4ustu3h.monocons.izzy_8.apk",
   "version": "1.1.1"
- },
- {
-  "id": "izzy:com.steel101.musicplayer",
-  "source": "izzy",
-  "name": "music player auto",
-  "summary": "music player that auto pulls art work",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.steel101.musicplayer/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/steel101/music-player-",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.steel101.musicplayer_9.apk",
-  "version": "1.0.9"
- },
- {
-  "id": "izzy:shub39.momentum",
-  "source": "izzy",
-  "name": "Momentum",
-  "summary": "App to make Montages easily",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/shub39.momentum/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/shub39/Momentum",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/shub39.momentum_1820.apk",
-  "version": "1.8.2"
- },
- {
-  "id": "izzy:org.onekash.kashcal",
-  "source": "izzy",
-  "name": "KashCal",
-  "summary": "All your calendars in one app. iCloud, CalDAV, device, ICS. Private.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/org.onekash.kashcal/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://kashcal.github.io/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.onekash.kashcal_666.apk",
-  "version": "2026.07.18"
  },
  {
   "id": "izzy:org.handmadeideas.floccus",
@@ -352,17 +1320,6 @@
   "version": "2.9.2-foss"
  },
  {
-  "id": "izzy:com.likhithpraveenk.storii",
-  "source": "izzy",
-  "name": "Storii - audiobookshelf client",
-  "summary": "Audiobookshelf client with offline downloads and background playback",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.likhithpraveenk.storii/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/likhithpraveenk/storii",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.likhithpraveenk.storii_2071.apk",
-  "version": "0.5.9"
- },
- {
   "id": "izzy:com.gokadzev.musify",
   "source": "izzy",
   "name": "Musify",
@@ -374,39 +1331,6 @@
   "version": "10.1.1"
  },
  {
-  "id": "izzy:com.github.stsaz.phiola",
-  "source": "izzy",
-  "name": "phiola",
-  "summary": "Fast audio player, recorder, converter",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.github.stsaz.phiola/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/stsaz/phiola",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.github.stsaz.phiola_20809.apk",
-  "version": "2.8.9"
- },
- {
-  "id": "izzy:com.fixupxer",
-  "source": "izzy",
-  "name": "FixupXer - URL Enhancer",
-  "summary": "Clean URL tracking, fix embeds (X, IG, FB, TikTok, Bluesky), catch link leaks",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.fixupxer/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/NeatCode-Labs/fixupxer",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.fixupxer_37.apk",
-  "version": "2.3.0"
- },
- {
-  "id": "izzy:com.deliacheminot.mona",
-  "source": "izzy",
-  "name": "Mona - HRT journal",
-  "summary": "Your hormonal journal",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.deliacheminot.mona/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/mona-hrt/mona",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.deliacheminot.mona_2017.apk",
-  "version": "1.15.0"
- },
- {
   "id": "izzy:com.capyreader.app",
   "source": "izzy",
   "name": "Capy Reader",
@@ -416,17 +1340,6 @@
   "homepage": "https://capyreader.com/",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.capyreader.app_1212.apk",
   "version": "2026.07.1212"
- },
- {
-  "id": "izzy:com.boxlabs.hexdroid",
-  "source": "izzy",
-  "name": "HexDroid IRC",
-  "summary": "A lightweight, modern IRC client for Android",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.boxlabs.hexdroid/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://hexdroid.boxlabs.uk/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.boxlabs.hexdroid_24.apk",
-  "version": "1.6.8"
  },
  {
   "id": "izzy:ca.ilianokokoro.umihi.music",
@@ -462,28 +1375,6 @@
   "version": "1.1.2"
  },
  {
-  "id": "izzy:acab.naiveha.subrosa",
-  "source": "izzy",
-  "name": "sub rosa by naiveHA",
-  "summary": "Program the static password and/or OpenPGP keys to your YubiKey or Nitrokey 3",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/acab.naiveha.subrosa/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/naive-HA/subrosa",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/acab.naiveha.subrosa_10.apk",
-  "version": "2.2.0"
- },
- {
-  "id": "izzy:uk.nktnet.webviewkiosk",
-  "source": "izzy",
-  "name": "Webview Kiosk",
-  "summary": "Turn your Android device into a locked-down web page in fullscreen mode.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/uk.nktnet.webviewkiosk/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://webviewkiosk.nktnet.uk/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/uk.nktnet.webviewkiosk_131.apk",
-  "version": "0.26.17"
- },
- {
   "id": "izzy:pl.edu.pjwstk.s999844.shoppinglist",
   "source": "izzy",
   "name": "ShoppingList",
@@ -515,17 +1406,6 @@
   "homepage": "https://github.com/leonlatsch/Photok",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.leonlatsch.photok_66.apk",
   "version": "3.1.3"
- },
- {
-  "id": "izzy:dev.dettmer.simplenotes",
-  "source": "izzy",
-  "name": "Simple Notes Sync",
-  "summary": "Offline notes & checklists, self-hosted sync. Under 5 MB, no ads, no tracking.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.dettmer.simplenotes/de-DE/icon.png",
-  "stars": 0,
-  "homepage": "https://dettmer.dev/projects/simple-notes/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.dettmer.simplenotes_46.apk",
-  "version": "2.12.1"
  },
  {
   "id": "izzy:de.qwerty287.ftpclient",
@@ -616,39 +1496,6 @@
   "version": "2.3"
  },
  {
-  "id": "izzy:com.eblan.launcher",
-  "source": "izzy",
-  "name": "Yagni Launcher",
-  "summary": "Only 2 MB Android Launcher, total control, zero bloat, zero tracking",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.eblan.launcher/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/JackEblan/YagniLauncher",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.eblan.launcher_85.apk",
-  "version": "0.8.5-alpha"
- },
- {
-  "id": "izzy:com.demizo.daily_you",
-  "source": "izzy",
-  "name": "Daily You",
-  "summary": "Every day is worth remembering…",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.demizo.daily_you/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/Demizo/Daily_You",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.demizo.daily_you_20260022.apk",
-  "version": "2.26.2"
- },
- {
-  "id": "izzy:com.castle.sefirah",
-  "source": "izzy",
-  "name": "Sefirah",
-  "summary": "Seamlessly integrate your phone to Windows devices",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.castle.sefirah/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/shrimqy/Sefirah-Android",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.castle.sefirah_33.apk",
-  "version": "3.0.0"
- },
- {
   "id": "izzy:chromahub.rhythm.app",
   "source": "izzy",
   "name": "Rhythm",
@@ -671,17 +1518,6 @@
   "version": "1.0.8"
  },
  {
-  "id": "izzy:org.wisso.newpipematerial",
-  "source": "izzy",
-  "name": "﻿NewPipe Material",
-  "summary": "A Material 3-focused independent NewPipe fork.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/org.wisso.newpipematerial/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/wizdom13/NewPipe_Material",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.wisso.newpipematerial_101312.apk",
-  "version": "0.28.8-m12"
- },
- {
   "id": "izzy:eu.hxreborn.phdp",
   "source": "izzy",
   "name": "Punch-hole Download Progress",
@@ -691,39 +1527,6 @@
   "homepage": "https://github.com/hxreborn/punch-hole-download-progress",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/eu.hxreborn.phdp_26000.apk",
   "version": "2.6.0"
- },
- {
-  "id": "izzy:dev.mi6e4ka.openstore",
-  "source": "izzy",
-  "name": "OpenStore",
-  "summary": "Libre client for popular russian app store",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.mi6e4ka.openstore/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://codeberg.org/mi6e4ka/openstore",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.mi6e4ka.openstore_10891643.apk",
-  "version": "2.2.2"
- },
- {
-  "id": "izzy:dev.imranr.obtainium",
-  "source": "izzy",
-  "name": "Obtainium",
-  "summary": "Get Android app updates directly from the source",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.imranr.obtainium/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/ImranR98/Obtainium/wiki",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.imranr.obtainium_23483.apk",
-  "version": "1.6.9"
- },
- {
-  "id": "izzy:com.zaneschepke.wireguardautotunnel",
-  "source": "izzy",
-  "name": "WG Tunnel",
-  "summary": "A WireGuard & AmneziaWG VPN client with auto-tunneling, lockdown & proxying.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.zaneschepke.wireguardautotunnel/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://wgtunnel.com/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.zaneschepke.wireguardautotunnel_50100.apk",
-  "version": "5.1.0"
  },
  {
   "id": "izzy:com.samyak.repostore",
@@ -759,17 +1562,6 @@
   "version": "1.5.8"
  },
  {
-  "id": "izzy:com.ericlowry.dnstoggle",
-  "source": "izzy",
-  "name": "DNS Toggle",
-  "summary": "Easily toggle and automate Private DNS through the Quick Settings panel.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.ericlowry.dnstoggle/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/ELowry/DNSToggle",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.ericlowry.dnstoggle_16.apk",
-  "version": "1.5.2"
- },
- {
   "id": "izzy:app.comaps",
   "source": "izzy",
   "name": "CoMaps - Hike, Bike, Drive Offline with Privacy",
@@ -779,28 +1571,6 @@
   "homepage": "https://www.comaps.app/",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/app.comaps_26071610.apk",
   "version": "2026.07.16-10"
- },
- {
-  "id": "izzy:com.thirtytwo.steps",
-  "source": "izzy",
-  "name": "32steps",
-  "summary": "Custom volume steps, headphone EQ, and graphic equalizer for Android",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.thirtytwo.steps/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/nulldio/32steps",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.thirtytwo.steps_34.apk",
-  "version": "2.2.10"
- },
- {
-  "id": "izzy:com.steel101.wearsyncforbreezy",
-  "source": "izzy",
-  "name": "Wear Sync for Breezy",
-  "summary": "send Breezy weather data from your phone to your Wear OS watch",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.steel101.wearsyncforbreezy/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/steel101/Wear-Sync-for-Breezy",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.steel101.wearsyncforbreezy_29.apk",
-  "version": "1.0.65"
  },
  {
   "id": "izzy:com.sinxn.mydiary",
@@ -814,28 +1584,6 @@
   "version": "1.0.3"
  },
  {
-  "id": "izzy:com.shub39.rush",
-  "source": "izzy",
-  "name": "Rush - Lyrics App",
-  "summary": "App to search, view, save and share lyrics",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.shub39.rush/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/shub39/Rush",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.shub39.rush_6500.apk",
-  "version": "6.5.0"
- },
- {
-  "id": "izzy:com.serranoie.app.minus",
-  "source": "izzy",
-  "name": "Minus",
-  "summary": "Register expenses, calculate and make reminders for your recurring expenses",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.serranoie.app.minus/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/isaacsa51/Minus",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.serranoie.app.minus_10306.apk",
-  "version": "1.3.6"
- },
- {
   "id": "izzy:com.minimo.launcher",
   "source": "izzy",
   "name": "Minimo Launcher",
@@ -845,17 +1593,6 @@
   "homepage": "https://github.com/VaibhavLakhera/minimo-launcher",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.minimo.launcher_125.apk",
   "version": "1.32.0"
- },
- {
-  "id": "izzy:com.jksalcedo.passvault",
-  "source": "izzy",
-  "name": "PassVault",
-  "summary": "A secure, lightweight, and 100% offline password manager.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.jksalcedo.passvault/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/jksalcedo/PassVault",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.jksalcedo.passvault_41.apk",
-  "version": "2.1.0"
  },
  {
   "id": "izzy:com.github.warren_bank.exoplayer_airplay_receiver",
@@ -935,28 +1672,6 @@
   "version": "2.2.2"
  },
  {
-  "id": "izzy:com.eyalm.adns",
-  "source": "izzy",
-  "name": "ADNS",
-  "summary": "A lightweight DNS-based ad blocker for Android",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.eyalm.adns/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/eyalm2000/adns",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.eyalm.adns_10.apk",
-  "version": "2.0.0-beta3"
- },
- {
-  "id": "izzy:com.dresos.dressecurecomms",
-  "source": "izzy",
-  "name": "DresSecureComms",
-  "summary": "De-Googled secure comms: private SMS, calls, encrypted contacts, threat scan.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.dresos.dressecurecomms/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/DresOperatingSystems/DresSecureComms",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.dresos.dressecurecomms_10.apk",
-  "version": "1.7.0"
- },
- {
   "id": "izzy:com.Colota",
   "source": "izzy",
   "name": "Colota - GPS Location Tracker",
@@ -979,17 +1694,6 @@
   "version": "3.41.2"
  },
  {
-  "id": "izzy:dev.chuk.betterbahn",
-  "source": "izzy",
-  "name": "Besser Bahn",
-  "summary": "find cheaper split ticket options for Deutsche Bahn connections",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.chuk.betterbahn/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/chukfinley/Besser-Bahn",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.chuk.betterbahn_22005.apk",
-  "version": "2.0.5"
- },
- {
   "id": "izzy:tech.dongdongbh.mindwtr",
   "source": "izzy",
   "name": "Mindwtr - GTD Task Manager",
@@ -1010,39 +1714,6 @@
   "homepage": "https://opentodolist.rpdev.net/",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/net.rpdev.opentodolist_10406.apk",
   "version": "3.52.0"
- },
- {
-  "id": "izzy:dev.pgaxis.musicaxs",
-  "source": "izzy",
-  "name": "Music.axs",
-  "summary": "Free and open-source music player",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.pgaxis.musicaxs/cs-CZ/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/PGAxis/MusicPlayer",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.pgaxis.musicaxs_28.apk",
-  "version": "1.11.2"
- },
- {
-  "id": "izzy:com.pg_axis.ytcnv",
-  "source": "izzy",
-  "name": "YouTube Conv.axs",
-  "summary": "Download YouTube videos as MP3 or MP4 with metadata and thumbnail embedding",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.pg_axis.ytcnv/cs-CZ/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/PGAxis/YTCnv",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.pg_axis.ytcnv_66.apk",
-  "version": "3.15.0"
- },
- {
-  "id": "izzy:com.darkrockstudios.apps.hammer.android",
-  "source": "izzy",
-  "name": "Hammer",
-  "summary": "A simple tool for building stories.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.darkrockstudios.apps.hammer.android/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/Darkrock-Studios/hammer-editor",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.darkrockstudios.apps.hammer.android_306010000.apk",
-  "version": "3.6.1"
  },
  {
   "id": "izzy:com.bnyro.clock",
@@ -1210,17 +1881,6 @@
   "version": "5.1.13"
  },
  {
-  "id": "izzy:app.simple.inure",
-  "source": "izzy",
-  "name": "Inure App Manager (Trial)",
-  "summary": "Fast, refined app manager for power users, with root and Shizuku support.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/app.simple.inure/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/Hamza417/Inure",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/app.simple.inure_10710.apk",
-  "version": "build107.1.0"
- },
- {
   "id": "izzy:com.ahmedsamy.imagetype",
   "source": "izzy",
   "name": "ImageType | Accessible Editor",
@@ -1254,39 +1914,6 @@
   "version": "1.8.0"
  },
  {
-  "id": "izzy:de.thomaskuenneth.benice",
-  "source": "izzy",
-  "name": "Be nice",
-  "summary": "Modern aesthetics. Open-source soul. Your Android launcher.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/de.thomaskuenneth.benice/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://codeberg.org/tkuenneth/benice",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.thomaskuenneth.benice_152.apk",
-  "version": "2.1.10"
- },
- {
-  "id": "izzy:de.michelinside.glucodatahandler",
-  "source": "izzy",
-  "name": "GlucoDataHandler",
-  "summary": "Your central hub for glucose readings on your Android devices!",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/de.michelinside.glucodatahandler/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/pachi81/GlucoDataHandler",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.michelinside.glucodatahandler_1195.apk",
-  "version": "2.4.1"
- },
- {
-  "id": "izzy:com.valhalla.thor",
-  "source": "izzy",
-  "name": "Thor - App Manager",
-  "summary": "Freeze, debloat, & install apps via Shizuku, Root & Dhizuku. 100% offline & FOSS",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.valhalla.thor/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/trinadhthatakula/Thor",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.valhalla.thor_1920.apk",
-  "version": "1.92.0-foss"
- },
- {
   "id": "izzy:com.openappslabs.jotter",
   "source": "izzy",
   "name": "Jotter",
@@ -1296,6 +1923,17 @@
   "homepage": "https://github.com/OpenAppsLabs/Jotter",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.openappslabs.jotter_11.apk",
   "version": "2.3.0"
+ },
+ {
+  "id": "izzy:com.jksalcedo.passvault",
+  "source": "izzy",
+  "name": "PassVault",
+  "summary": "A secure, lightweight, and 100% offline password manager.",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.jksalcedo.passvault/en-US/icon.png",
+  "stars": 0,
+  "homepage": "https://github.com/jksalcedo/PassVault",
+  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.jksalcedo.passvault_40.apk",
+  "version": "2.0.2"
  },
  {
   "id": "izzy:com.alftendev.notlistener",
@@ -1309,17 +1947,6 @@
   "version": "2.7.3"
  },
  {
-  "id": "izzy:InfinityLoop1309.NewPipeEnhanced",
-  "source": "izzy",
-  "name": "PipePipe",
-  "summary": "A FLOSS Android app to let you browse YouTube, NicoNico and BiliBili freely.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/InfinityLoop1309.NewPipeEnhanced/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/InfinityLoop1308/PipePipe",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/InfinityLoop1309.NewPipeEnhanced_110404.apk",
-  "version": "5.2.3"
- },
- {
   "id": "izzy:net.helcel.beans",
   "source": "izzy",
   "name": "Beans",
@@ -1329,17 +1956,6 @@
   "homepage": "https://github.com/helcel-net/beans",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/net.helcel.beans_945.apk",
   "version": "1.5"
- },
- {
-  "id": "izzy:io.github.friesi23.mhabit",
-  "source": "izzy",
-  "name": "Table Habit",
-  "summary": "Boost your own habit growth with charts.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/io.github.friesi23.mhabit/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/FriesI23/mhabit",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/io.github.friesi23.mhabit_2172.apk",
-  "version": "1.25.7"
  },
  {
   "id": "izzy:helium314.keyboard",
@@ -1384,17 +2000,6 @@
   "homepage": "https://github.com/sidhant947/Path",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.sidhant.path_2011.apk",
   "version": "1.0.10"
- },
- {
-  "id": "izzy:org.tagspaces.mobileapp",
-  "source": "izzy",
-  "name": "TagSpaces – Your versatile file organizer",
-  "summary": "organize, tag and browse your files, photos and documents",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/org.tagspaces.mobileapp/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://www.tagspaces.org/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.tagspaces.mobileapp_61311.apk",
-  "version": "6.13.11"
  },
  {
   "id": "izzy:eu.darken.myperm",
@@ -1496,17 +2101,6 @@
   "version": "4.2.4"
  },
  {
-  "id": "izzy:org.akanework.gramophone",
-  "source": "izzy",
-  "name": "Gramophone",
-  "summary": "Simple offline music player with minimalistic design",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/org.akanework.gramophone/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/FoedusProgramme/Gramophone",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.akanework.gramophone_21.apk",
-  "version": "1.1.0"
- },
- {
   "id": "izzy:eu.darken.capod",
   "source": "izzy",
   "name": "CAPod - Companion for AirPods",
@@ -1562,17 +2156,6 @@
   "version": "2.0.12"
  },
  {
-  "id": "izzy:com.catpuppyapp.hahanote",
-  "source": "izzy",
-  "name": "HahaNote",
-  "summary": "A cross-platforms note taking and syncing app",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.catpuppyapp.hahanote/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/catpuppyapp/HahaNote-Release",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.catpuppyapp.hahanote_2007.apk",
-  "version": "1.0.6"
- },
- {
   "id": "izzy:com.roozbehzarei.filester",
   "source": "izzy",
   "name": "Filester",
@@ -1582,17 +2165,6 @@
   "homepage": "https://filester.roozbehzarei.com",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.roozbehzarei.filester_19.apk",
   "version": "3.0.3-foss"
- },
- {
-  "id": "izzy:ir.ammari.nodelook",
-  "source": "izzy",
-  "name": "NodeLook",
-  "summary": "A general website checker for users facing internet restrictions.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/ir.ammari.nodelook/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://nodelook.github.io/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/ir.ammari.nodelook_5.apk",
-  "version": "1.4.0"
  },
  {
   "id": "izzy:io.github.ronynn.karui",
@@ -1639,17 +2211,6 @@
   "version": "6.0.5"
  },
  {
-  "id": "izzy:com.vishaltelangre.nerdcalci",
-  "source": "izzy",
-  "name": "NerdCalci",
-  "summary": "Calculator for nerds with variables, syntax highlighting, and file sessions",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.vishaltelangre.nerdcalci/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/vishaltelangre/NerdCalci",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.vishaltelangre.nerdcalci_493.apk",
-  "version": "4.9.3"
- },
- {
   "id": "izzy:com.seeker.seekprivacy",
   "source": "izzy",
   "name": "SeekPrivacy",
@@ -1694,17 +2255,6 @@
   "version": "4.1.0-foss"
  },
  {
-  "id": "izzy:it.fast4x.riplay",
-  "source": "izzy",
-  "name": "RiPlay",
-  "summary": "Multiplatform Music Player",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/it.fast4x.riplay/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/fast4x/RiPlay",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/it.fast4x.riplay_86.apk",
-  "version": "0.7.85"
- },
- {
   "id": "izzy:io.github.soundremote",
   "source": "izzy",
   "name": "SoundRemote",
@@ -1727,17 +2277,6 @@
   "version": "3.1.1"
  },
  {
-  "id": "izzy:dev.robin.privacify",
-  "source": "izzy",
-  "name": "Privacify",
-  "summary": "Privacy control center — monitor permissions, track sensors, kill switches.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.robin.privacify/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/robinsrk/privacify",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.robin.privacify_24.apk",
-  "version": "2.4"
- },
- {
   "id": "izzy:com.gasperpintar.smokingtracker",
   "source": "izzy",
   "name": "Smoking Tracker",
@@ -1758,17 +2297,6 @@
   "homepage": "https://github.com/DaKlok/BibleLockScreen",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.daklok.biblelockscreen_12.apk",
   "version": "2.1"
- },
- {
-  "id": "izzy:org.gonbei774.pocketcheck",
-  "source": "izzy",
-  "name": "PocketCheck",
-  "summary": "A working memory app - \"Anything to put in your pocket?\"",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/org.gonbei774.pocketcheck/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://codeberg.org/Gonbei774/PocketCheck",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.gonbei774.pocketcheck_18.apk",
-  "version": "1.8.0"
  },
  {
   "id": "izzy:in.sunilpaulmathew.ashell",
@@ -1848,17 +2376,6 @@
   "version": "1.44.3"
  },
  {
-  "id": "izzy:com.eddyizm.degoogled.tempus",
-  "source": "izzy",
-  "name": "Tempus",
-  "summary": "An open-source and privacy focused music client for Subsonic",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.eddyizm.degoogled.tempus/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://eddyizm.github.io/tempus/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.eddyizm.degoogled.tempus_33.apk",
-  "version": "4.20.5"
- },
- {
   "id": "izzy:com.achunt.weboslauncher",
   "source": "izzy",
   "name": "W Launcher",
@@ -1914,17 +2431,6 @@
   "version": "1.6.3"
  },
  {
-  "id": "izzy:eu.faircode.email",
-  "source": "izzy",
-  "name": "FairEmail",
-  "summary": "FairEmail - Fully featured, open source, privacy oriented email app for Android",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/eu.faircode.email/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://email.faircode.eu/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/eu.faircode.email_2325.apk",
-  "version": "1.2325"
- },
- {
   "id": "izzy:dev.bg.skylib",
   "source": "izzy",
   "name": "Skylib",
@@ -1934,17 +2440,6 @@
   "homepage": "https://codeberg.org/bg443/Skylib",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.bg.skylib_8.apk",
   "version": "1.0.7"
- },
- {
-  "id": "izzy:com.shub39.grit",
-  "source": "izzy",
-  "name": "Grit",
-  "summary": "A Simple ToDo List and Habit Tracker",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.shub39.grit/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/shub39/Grit",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.shub39.grit_6040.apk",
-  "version": "6.0.4"
  },
  {
   "id": "izzy:com.isayso.fire2kodi",
@@ -2033,17 +2528,6 @@
   "homepage": "https://kreate.knighthat.me/",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/me.knighthat.kreate_141.apk",
   "version": "2.2.3-izzy"
- },
- {
-  "id": "izzy:io.github.sms2email.sms2email",
-  "source": "izzy",
-  "name": "SMS2Email",
-  "summary": "Forwards SMS messages to SMTP (Email) server",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/io.github.sms2email.sms2email/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/SMS2Email/SMS2Email",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/io.github.sms2email.sms2email_44.apk",
-  "version": "1.1.31"
  },
  {
   "id": "izzy:eu.darken.octi",
@@ -2222,28 +2706,6 @@
   "version": "2.7.2"
  },
  {
-  "id": "izzy:io.github.gonbei774.calisthenicsmemory",
-  "source": "izzy",
-  "name": "Calisthenics Memory",
-  "summary": "Bodyweight workout tracker - create and customize your own exercises",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/io.github.gonbei774.calisthenicsmemory/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://codeberg.org/Gonbei774/CalisthenicsMemory",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/io.github.gonbei774.calisthenicsmemory_34.apk",
-  "version": "1.25.1"
- },
- {
-  "id": "izzy:com.cliambrown.pilltime",
-  "source": "izzy",
-  "name": "Pill Time",
-  "summary": "Keep track of meds that can be taken as needed (not at a specific time)",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.cliambrown.pilltime/en-CA/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/cliambrown/PillTime",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.cliambrown.pilltime_19.apk",
-  "version": "19.0"
- },
- {
   "id": "izzy:ch.martinstoeckli.silentnotes",
   "source": "izzy",
   "name": "SilentNotes",
@@ -2264,17 +2726,6 @@
   "homepage": "https://tiefprompt.com/",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/io.github.tiefseetauchner.tiefprompt_262.apk",
   "version": "1.0.3"
- },
- {
-  "id": "izzy:org.courville.nova",
-  "source": "izzy",
-  "name": "Nova Video Player",
-  "summary": "Video player for local/network content with subtitle/metadata download support",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/org.courville.nova/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://www.reddit.com/r/NovaVideoPlayer",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.courville.nova_2663205.apk",
-  "version": "6.4.40-20260628.2232"
  },
  {
   "id": "izzy:io.github.muntashirakon.AppManager",
@@ -2321,28 +2772,6 @@
   "version": "2.0.3"
  },
  {
-  "id": "izzy:com.hardbacknutter.nevertoomanybooks",
-  "source": "izzy",
-  "name": "NeverTooManyBooks",
-  "summary": "keep track of your books and comics",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.hardbacknutter.nevertoomanybooks/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/tfonteyn/NeverTooManyBooks",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.hardbacknutter.nevertoomanybooks_124.apk",
-  "version": "7.16.2"
- },
- {
-  "id": "izzy:com.catpuppyapp.puppygit.play.pro",
-  "source": "izzy",
-  "name": "PuppyGit",
-  "summary": "A Modern Git Client For Android",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.catpuppyapp.puppygit.play.pro/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/catpuppyapp/PuppyGit",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.catpuppyapp.puppygit.play.pro_130.apk",
-  "version": "1.1.5.4"
- },
- {
   "id": "izzy:com.best.deskclock",
   "source": "izzy",
   "name": "Clock",
@@ -2352,17 +2781,6 @@
   "homepage": "https://github.com/BlackyHawky/Clock",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.best.deskclock_2035.apk",
   "version": "2.31"
- },
- {
-  "id": "izzy:com.tomclaw.appsend",
-  "source": "izzy",
-  "name": "Appteka",
-  "summary": "alternative app store",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.tomclaw.appsend/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/solkin/appteka-android",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.tomclaw.appsend_1074.apk",
-  "version": "20.0"
  },
  {
   "id": "izzy:org.frknkrc44.hma_oss",
@@ -2398,17 +2816,6 @@
   "version": "3.3.4"
  },
  {
-  "id": "izzy:com.zell_mbc.medilog",
-  "source": "izzy",
-  "name": "MediLog",
-  "summary": "Log health metrics such as blood pressure, weight and quite a few others",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.zell_mbc.medilog/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://codeberg.org/toz/MediLog",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.zell_mbc.medilog_5526.apk",
-  "version": "3.7.1"
- },
- {
   "id": "izzy:com.opennotes",
   "source": "izzy",
   "name": "Open Notes",
@@ -2440,17 +2847,6 @@
   "homepage": "https://github.com/jackBonadies/SeekerAndroid",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.companyname.andriodapp1_136.apk",
   "version": "3.7.4"
- },
- {
-  "id": "izzy:app.lonecloud.prism",
-  "source": "izzy",
-  "name": "Prism",
-  "summary": "Privacy-first UnifiedPush distributor with an optional self-hosted server",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/app.lonecloud.prism/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://git.lonecloud.dev/lone-cloud/prism-android",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/app.lonecloud.prism_10301.apk",
-  "version": "1.3.1"
  },
  {
   "id": "izzy:de.mepi0011.openinghoursmanager",
@@ -2508,17 +2904,6 @@
   "version": "2.1.0"
  },
  {
-  "id": "izzy:com.perol.pixez",
-  "source": "izzy",
-  "name": "PixEz",
-  "summary": "A third-party Pixiv flutter client that supports viewing ugoira",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.perol.pixez/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/Notsfsssf/pixez-flutter",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.perol.pixez_10010040.apk",
-  "version": "0.9.104 wsv"
- },
- {
   "id": "izzy:com.justdeax.composeStopwatch",
   "source": "izzy",
   "name": "Compose Stopwatch",
@@ -2539,17 +2924,6 @@
   "homepage": "https://github.com/salvogiangri/KnoxPatch",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/io.mesalabs.knoxpatch_8003.apk",
   "version": "0.8.3"
- },
- {
-  "id": "izzy:deckers.thibault.aves",
-  "source": "izzy",
-  "name": "Aves",
-  "summary": "Gallery and metadata explorer",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/deckers.thibault.aves/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/deckerst/aves",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/deckers.thibault.aves_17202.apk",
-  "version": "1.14.8"
  },
  {
   "id": "izzy:com.rosan.dhizuku",
@@ -2594,17 +2968,6 @@
   "homepage": "https://github.com/hxreborn/biometric-bypass",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/eu.rafareborn.biometricbypass_201.apk",
   "version": "2.0.1"
- },
- {
-  "id": "izzy:com.razeeman.util.simpletimetracker",
-  "source": "izzy",
-  "name": "Simple Time Tracker",
-  "summary": "Time tracker for work, study, and building better daily habits.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.razeeman.util.simpletimetracker/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/Razeeman/Android-SimpleTimeTracker",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.razeeman.util.simpletimetracker_141.apk",
-  "version": "1.58"
  },
  {
   "id": "izzy:org.sbv.pockettracker",
@@ -2693,17 +3056,6 @@
   "homepage": "https://github.com/jingcjie/WDCable_flutter",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.jingcjie.wifi_direct_cable_4001.apk",
   "version": "2.0.1"
- },
- {
-  "id": "izzy:com.rve.systemmonitor",
-  "source": "izzy",
-  "name": "RvSystem Monitor",
-  "summary": "High-performance system monitoring for Android",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.rve.systemmonitor/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/Rve27/RvSystem-Monitor",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.rve.systemmonitor_7.apk",
-  "version": "0.7.1-alpha"
  },
  {
   "id": "izzy:com.sidhant.wallet",
@@ -2970,28 +3322,6 @@
   "version": "3.8.0"
  },
  {
-  "id": "izzy:com.bnyro.wallpaper",
-  "source": "izzy",
-  "name": "Wall You",
-  "summary": "Privacy focused wallpaper app built with MD3",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.bnyro.wallpaper/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/you-apps/WallYou",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.bnyro.wallpaper_40.apk",
-  "version": "15.2"
- },
- {
-  "id": "izzy:cgeo.geocaching",
-  "source": "izzy",
-  "name": "c:geo",
-  "summary": "powerful geocaching app",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/cgeo.geocaching/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://www.cgeo.org/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/cgeo.geocaching_20260619.apk",
-  "version": "2026.06.19"
- },
- {
   "id": "izzy:com.signalsense.app",
   "source": "izzy",
   "name": "SignalSense – Network Switch Alerts",
@@ -3179,17 +3509,6 @@
   "version": "1.1.10"
  },
  {
-  "id": "izzy:com.harsh.shah.saavnmp3",
-  "source": "izzy",
-  "name": "Melotune",
-  "summary": "a clean, ad-free Android music streaming app",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.harsh.shah.saavnmp3/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/Harshshah6/SaavnMp3-Android",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.harsh.shah.saavnmp3_11.apk",
-  "version": "1.0.17"
- },
- {
   "id": "izzy:com.deniscerri.ytdl",
   "source": "izzy",
   "name": "YTDLnis",
@@ -3278,17 +3597,6 @@
   "version": "0.19"
  },
  {
-  "id": "izzy:com.crazyunicorn.simplequizfr",
-  "source": "izzy",
-  "name": "Simple Quiz FR",
-  "summary": "French quizzes featuring filtering by category or difficulty, and quiz creation",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.crazyunicorn.simplequizfr/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://codeberg.org/Crazy_Unicorn/simple_quiz_fr",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.crazyunicorn.simplequizfr_12.apk",
-  "version": "2026.06.13"
- },
- {
   "id": "izzy:com.akslabs.cloudgallery",
   "source": "izzy",
   "name": "Chitralaya CloudGallery App",
@@ -3320,28 +3628,6 @@
   "homepage": "https://mlauncher.5646316.xyz",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/app.mlauncher_1120000.apk",
   "version": "1.12.0 Build 0"
- },
- {
-  "id": "izzy:xyz.tberghuis.floatingtimer",
-  "source": "izzy",
-  "name": "Floating Timer",
-  "summary": "Features both a countdown timer and stopwatch that will float over other apps.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/xyz.tberghuis.floatingtimer/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/tberghuis/FloatingCountdownTimer",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/xyz.tberghuis.floatingtimer_90.apk",
-  "version": "1.50.0"
- },
- {
-  "id": "izzy:org.schabi.newpipe",
-  "source": "izzy",
-  "name": "NewPipe",
-  "summary": "A free lightweight YouTube frontend for Android.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/org.schabi.newpipe/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://newpipe.net",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.schabi.newpipe_1013.apk",
-  "version": "0.28.8"
  },
  {
   "id": "izzy:nodomain.neonbranch.treasurehunt",
@@ -3432,17 +3718,6 @@
   "version": "2.8.1"
  },
  {
-  "id": "izzy:eu.hxreborn.cleanshare",
-  "source": "izzy",
-  "name": "CleanShare",
-  "summary": "Xposed module to clean up Android's Share Sheet",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/eu.hxreborn.cleanshare/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/hxreborn/cleanshare",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/eu.hxreborn.cleanshare_313.apk",
-  "version": "3.1.3"
- },
- {
   "id": "izzy:com.shezik.drawanywhere",
   "source": "izzy",
   "name": "DrawAnywhere",
@@ -3520,17 +3795,6 @@
   "version": "6.2.1"
  },
  {
-  "id": "izzy:de.kaffeemitkoffein.tinyweatherforecastgermany",
-  "source": "izzy",
-  "name": "Tiny Weather Forecast Germany",
-  "summary": "Weather forecast based on open data from the Deutscher Wetterdienst.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/de.kaffeemitkoffein.tinyweatherforecastgermany/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://codeberg.org/Starfish/TinyWeatherForecastGermany",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.kaffeemitkoffein.tinyweatherforecastgermany_62.apk",
-  "version": "0.63.3"
- },
- {
   "id": "izzy:de.kaffeemitkoffein.imagepipe",
   "source": "izzy",
   "name": "Imagepipe",
@@ -3540,17 +3804,6 @@
   "homepage": "https://codeberg.org/Starfish/Imagepipe",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.kaffeemitkoffein.imagepipe_57.apk",
   "version": "0.78"
- },
- {
-  "id": "izzy:com.viscouspot.gitsync",
-  "source": "izzy",
-  "name": "GitSync",
-  "summary": "Git client for syncing a repository between remote and a local directory",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.viscouspot.gitsync/ar/icon.png",
-  "stars": 0,
-  "homepage": "https://gitsync.viscouspotenti.al/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.viscouspot.gitsync_18602.apk",
-  "version": "1.8.60"
  },
  {
   "id": "izzy:com.openappslabs.fiveg",
@@ -3762,17 +4015,6 @@
   "version": "2.1.20"
  },
  {
-  "id": "izzy:com.j.m3play",
-  "source": "izzy",
-  "name": "M3Play",
-  "summary": "Material 3 music player with streaming, offline & song recognition",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.j.m3play/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://m3-play.vercel.app/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.j.m3play_142.apk",
-  "version": "3.0.9"
- },
- {
   "id": "izzy:akylas.alpi.maps",
   "source": "izzy",
   "name": "Alpi Maps",
@@ -3870,17 +4112,6 @@
   "homepage": "https://georg-sieber.de/?page=app-remotepointer",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/systems.sieber.remotespotlight_24.apk",
   "version": "3.2"
- },
- {
-  "id": "izzy:su.comp.bk",
-  "source": "izzy",
-  "name": "BkEmu",
-  "summary": "Elektronika BK-0010/11M Emulator",
-  "icon": "",
-  "stars": 0,
-  "homepage": "https://github.com/3cky/bkemu-android",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/su.comp.bk_1002001.apk",
-  "version": "1.2.1"
  },
  {
   "id": "izzy:net.mm2d.dmsexplorer",
@@ -4114,17 +4345,6 @@
   "version": "77-4646c57-20260525"
  },
  {
-  "id": "izzy:com.cuscus.wifiaudiostreaming",
-  "source": "izzy",
-  "name": "WiFi Audio Streaming",
-  "summary": "Stream audio over your local network",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.cuscus.wifiaudiostreaming/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://gitlab.com/marcomorosi.dev/wifiaudiostreaming-android",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.cuscus.wifiaudiostreaming_8.apk",
-  "version": "1.0"
- },
- {
   "id": "izzy:com.codepup.workout_timer",
   "source": "izzy",
   "name": "OpenHIIT",
@@ -4147,17 +4367,6 @@
   "version": "1.9.0"
  },
  {
-  "id": "izzy:rkr.simplekeyboard.inputmethod",
-  "source": "izzy",
-  "name": "Simple Keyboard",
-  "summary": "An app for those who only need a keyboard and nothing more",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/rkr.simplekeyboard.inputmethod/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/rkkr/simple-keyboard",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/rkr.simplekeyboard.inputmethod_145.apk",
-  "version": "6.4"
- },
- {
   "id": "izzy:com.starry.myne",
   "source": "izzy",
   "name": "Myne: Download & Read eBooks",
@@ -4178,17 +4387,6 @@
   "homepage": "https://github.com/Pool-Of-Tears/GreenStash",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.starry.greenstash_440.apk",
   "version": "4.4.0"
- },
- {
-  "id": "izzy:com.ki_bun.pioneer",
-  "source": "izzy",
-  "name": "Pioneer",
-  "summary": "Open source universal progress tracker",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.ki_bun.pioneer/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/ki-bun/Pioneer",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.ki_bun.pioneer_10.apk",
-  "version": "2.3.0"
  },
  {
   "id": "izzy:com.kblack.offlinemap",
@@ -4255,17 +4453,6 @@
   "homepage": "https://github.com/nikhilvishwakarma00/Velune",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.nikhil.yt_10.apk",
   "version": "1.1.2 "
- },
- {
-  "id": "izzy:app.flicky",
-  "source": "izzy",
-  "name": "Flicky",
-  "summary": "Unofficial Fdroid client (for Android TV)",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/app.flicky/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/mlm-games/flicky",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/app.flicky_941.apk",
-  "version": "4.4.2"
  },
  {
   "id": "izzy:remix.myplayer",
@@ -4796,17 +4983,6 @@
   "version": "0.11.0"
  },
  {
-  "id": "izzy:com.vishal2376.snaptick",
-  "source": "izzy",
-  "name": "Snaptick",
-  "summary": "Boost your daily productivity with Snaptick 🚀",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.vishal2376.snaptick/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/vishal2376/snaptick",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.vishal2376.snaptick_12.apk",
-  "version": "4.0"
- },
- {
   "id": "izzy:com.machiav3lli.backup",
   "source": "izzy",
   "name": "Neo Backup",
@@ -4860,17 +5036,6 @@
   "homepage": "https://github.com/mardous/BoomingMusic",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.mardous.booming_1300300.apk",
   "version": "1.3.0"
- },
- {
-  "id": "izzy:com.sobuumedia.sobuu",
-  "source": "izzy",
-  "name": "Sobuu",
-  "summary": "Track books reading and organise your readings",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.sobuumedia.sobuu/de/icon.png",
-  "stars": 0,
-  "homepage": "https://getsobuu.com",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.sobuumedia.sobuu_11.apk",
-  "version": "1.4.1"
  },
  {
   "id": "izzy:kittoku.osc",
@@ -4961,17 +5126,6 @@
   "version": "2.00.00"
  },
  {
-  "id": "izzy:org.kaorun.nouto",
-  "source": "izzy",
-  "name": "Nouto",
-  "summary": "Android app for taking notes with Rich Text Editor features support",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/org.kaorun.nouto/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/HotarunIchijou/Nouto",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.kaorun.nouto_2.apk",
-  "version": "1.1.0"
- },
- {
   "id": "izzy:dev.itsvic.parceltracker",
   "source": "izzy",
   "name": "Deliveries: Track your parcels",
@@ -4981,17 +5135,6 @@
   "homepage": "https://github.com/itsvic-dev/deliveries",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.itsvic.parceltracker_10501000.apk",
   "version": "1.5.1"
- },
- {
-  "id": "izzy:com.jerboa",
-  "source": "izzy",
-  "name": "Jerboa for Lemmy",
-  "summary": "An app for Lemmy, a federated reddit alternative.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.jerboa/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/LemmyNet/jerboa",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.jerboa_87.apk",
-  "version": "0.0.87-fdroid"
  },
  {
   "id": "izzy:org.juanro.feedtv",
@@ -5025,17 +5168,6 @@
   "homepage": "https://github.com/AChep/PocketMode",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.artemchep.pocketmode_1110300.apk",
   "version": "1.11.3.0"
- },
- {
-  "id": "izzy:com.openappslabs.coffee",
-  "source": "izzy",
-  "name": "Coffee",
-  "summary": "Coffee - A lightweight app that prevents your screen from dimming or locking.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.openappslabs.coffee/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/OpenAppsLabs/Coffee",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.openappslabs.coffee_4.apk",
-  "version": "1.3.0"
  },
  {
   "id": "izzy:ch.famoser.mensa",
@@ -5135,17 +5267,6 @@
   "homepage": "https://github.com/Joinsider/dhbw",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.fampopprol.dhbwhorb_25.apk",
   "version": "v2.1.1"
- },
- {
-  "id": "izzy:com.svenjacobs.app.leon",
-  "source": "izzy",
-  "name": "Léon – The URL Cleaner",
-  "summary": "Removes tracking & other redundant parameters from web links for sharing",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.svenjacobs.app.leon/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/leon-cleaning-services/leon",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.svenjacobs.app.leon_279.apk",
-  "version": "58"
  },
  {
   "id": "izzy:stasis.client.android",
@@ -5555,17 +5676,6 @@
   "version": "2026.04.03"
  },
  {
-  "id": "izzy:com.je.dejpeg",
-  "source": "izzy",
-  "name": "DeJPEG",
-  "summary": "An offline compression artifact remover and denoiser",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.je.dejpeg/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://codeberg.org/dryerlint/dejpeg",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.je.dejpeg_401.apk",
-  "version": "4.0.1"
- },
- {
   "id": "izzy:com.eliasbuenosdias.geogas",
   "source": "izzy",
   "name": "GeoGas",
@@ -5641,17 +5751,6 @@
   "homepage": "https://github.com/rohankhayech/Choona",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.rohankhayech.choona_16.apk",
   "version": "1.6.1"
- },
- {
-  "id": "izzy:de.ntdote.medicalcalendarlog",
-  "source": "izzy",
-  "name": "Medical Calendar Log",
-  "summary": "Privacy-focused medical event tracking using your device's calendar system",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/de.ntdote.medicalcalendarlog/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://codeberg.org/svewa/MedicalCalendarLog",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.ntdote.medicalcalendarlog_49.apk",
-  "version": "2.0.6"
  },
  {
   "id": "izzy:vdrs.sappu.lafk.learn",
@@ -5883,17 +5982,6 @@
   "homepage": "https://github.com/lotusprey/otraku",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.otraku.app_2094.apk",
   "version": "1.12.1"
- },
- {
-  "id": "izzy:com.github.enteraname74.soulsearching",
-  "source": "izzy",
-  "name": "Soul Searching",
-  "summary": "A complete and powerful music player for Android.",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.github.enteraname74.soulsearching/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/enteraname74/SoulSearching",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.github.enteraname74.soulsearching_36.apk",
-  "version": "0.15.1"
  },
  {
   "id": "izzy:app.musikus",
@@ -6136,17 +6224,6 @@
   "homepage": "https://github.com/treehouses/remote",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/io.treehouses.remote_6330.apk",
   "version": "6330"
- },
- {
-  "id": "izzy:dev.bg.bikebridge",
-  "source": "izzy",
-  "name": "BikeBridge",
-  "summary": "Companion app for e-bikes and components",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/dev.bg.bikebridge/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://codeberg.org/bg443/BikeBridge",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.bg.bikebridge_6.apk",
-  "version": "0.0.6"
  },
  {
   "id": "izzy:com.uravgcode.chooser",
@@ -6411,17 +6488,6 @@
   "homepage": "https://github.com/machiav3lli/DerDieDas",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.machiav3lli.derdiedas_3000.apk",
   "version": "3.0.0"
- },
- {
-  "id": "izzy:org.swlabs.fireflynotes",
-  "source": "izzy",
-  "name": "Firefly Notes",
-  "summary": "Simple notes app that deletes notes after 24 hours",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/org.swlabs.fireflynotes/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://codeberg.org/SWLabs/fireflynotesapk",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.swlabs.fireflynotes_13.apk",
-  "version": "v1.3"
  },
  {
   "id": "izzy:org.maintainteam.hypatia",
@@ -6952,17 +7018,6 @@
   "version": "1.2.0"
  },
  {
-  "id": "izzy:de.bahnhoefe.deutschlands.bahnhofsfotos",
-  "source": "izzy",
-  "name": "Railway station photos",
-  "summary": "Collect photos of railway stations for https://railway-stations.org",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/de.bahnhoefe.deutschlands.bahnhofsfotos/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://railway-stations.org/",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.bahnhoefe.deutschlands.bahnhofsfotos_97.apk",
-  "version": "16.4.0"
- },
- {
   "id": "izzy:com.nothingsecure",
   "source": "izzy",
   "name": "Nothing K",
@@ -7445,17 +7500,6 @@
   "homepage": "https://github.com/PranshulGG/RecordMaster",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.pranshulgg.recordmaster_2.apk",
   "version": "1.0.0"
- },
- {
-  "id": "izzy:com.trustdevice.android.demo",
-  "source": "izzy",
-  "name": "TrustDevice Fingerprint",
-  "summary": "determining device uniqueness and risk identification",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.trustdevice.android.demo/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/trustdecision/trustdevice-android",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.trustdevice.android.demo_114.apk",
-  "version": "1.1.4"
  },
  {
   "id": "izzy:com.prinzpiuz.msm",
@@ -8072,17 +8116,6 @@
   "homepage": "https://myfin.afaneca.com/",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.afaneca.myfin_24100.apk",
   "version": "2.4.1"
- },
- {
-  "id": "izzy:org.woheller69.exifedit",
-  "source": "izzy",
-  "name": "ExifEdit",
-  "summary": "Simple EXIF Editor for Android: Delete EXIF, Modify date",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/org.woheller69.exifedit/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/woheller69/exifedit",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/org.woheller69.exifedit_13.apk",
-  "version": "1.3"
  },
  {
   "id": "izzy:fr.inria.tyrex.senslogs",
@@ -8710,17 +8743,6 @@
   "homepage": "https://github.com/supershadoe/delta",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/dev.shadoe.delta_18.apk",
   "version": "2025.08+0"
- },
- {
-  "id": "izzy:com.sunilpaulmathew.snotz",
-  "source": "izzy",
-  "name": "sNotz",
-  "summary": "An open-source and completely offline application to manage simple notes",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.sunilpaulmathew.snotz/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/sunilpaulmathew/sNotz",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.sunilpaulmathew.snotz_34.apk",
-  "version": "v0.34"
  },
  {
   "id": "izzy:org.woheller69.ImapLocate",
@@ -10483,17 +10505,6 @@
   "version": "0.3.2-dev"
  },
  {
-  "id": "izzy:com.thinkdifferent.anywebview",
-  "source": "izzy",
-  "name": "AnyWebView",
-  "summary": "Any WebView is OK!",
-  "icon": "",
-  "stars": 0,
-  "homepage": "https://github.com/neoblackxt/AnyWebView",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.thinkdifferent.anywebview_4.apk",
-  "version": "1.3"
- },
- {
   "id": "izzy:com.nagopy.android.aplin",
   "source": "izzy",
   "name": "Aplin",
@@ -10613,17 +10624,6 @@
   "homepage": "https://transportr.app/",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.grobox.liberario_127.apk",
   "version": "2.2.3"
- },
- {
-  "id": "izzy:de.kaiserdragon.callforwardingstatus",
-  "source": "izzy",
-  "name": "CallForwardingStatus",
-  "summary": "Simply forward your calls",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/de.kaiserdragon.callforwardingstatus/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/Kaiserdragon2/CallForwarding",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/de.kaiserdragon.callforwardingstatus_8.apk",
-  "version": "2.1"
  },
  {
   "id": "izzy:com.particlesdevs.photoncamera",
@@ -12617,17 +12617,6 @@
   "version": "1.2.3"
  },
  {
-  "id": "izzy:com.example.kinginstaller",
-  "source": "izzy",
-  "name": "KingInstaller",
-  "summary": "Install packages \"as Google Play Store\", to work around restrictions!",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.example.kinginstaller/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/fcaronte/KingInstaller",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.example.kinginstaller_1.apk",
-  "version": "1.4"
- },
- {
   "id": "izzy:com.henrikherzig.simplewol",
   "source": "izzy",
   "name": "Simple WOL",
@@ -13787,7 +13776,7 @@
   "source": "izzy",
   "name": "Port Authority",
   "summary": "port scanner",
-  "icon": "",
+  "icon": "https://apt.izzysoft.de/fdroid/repo/com.aaronjwood.portauthority.free/en-US/icon.png",
   "stars": 0,
   "homepage": "https://github.com/aaronjwood/PortAuthority",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.aaronjwood.portauthority.free_67.apk",
@@ -13979,17 +13968,6 @@
   "homepage": "https://github.com/CYB3R-G0D/Canvass-app",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.cyb3rg0d.canvass_10.apk",
   "version": "1.5.0"
- },
- {
-  "id": "izzy:com.bewell.lite",
-  "source": "izzy",
-  "name": "BeWell",
-  "summary": "a heart rate monitor",
-  "icon": "",
-  "stars": 0,
-  "homepage": "https://github.com/TheArtyomMDev/BeWell",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.bewell.lite_4.apk",
-  "version": "4.0.0-alpha"
  },
  {
   "id": "izzy:com.mgoogle.android.gms",
@@ -14507,17 +14485,6 @@
   "homepage": "https://github.com/Superredstone/Port-Scanner",
   "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.portscanner.superredstone_4.apk",
   "version": "1.0.4"
- },
- {
-  "id": "izzy:com.cmgcode.minimoods",
-  "source": "izzy",
-  "name": "Mini Moods",
-  "summary": "no-frills mood tracker that provides full control over your data",
-  "icon": "https://apt.izzysoft.de/fdroid/repo/com.cmgcode.minimoods/en-US/icon.png",
-  "stars": 0,
-  "homepage": "https://github.com/CampbellMG/MiniMoods",
-  "apkUrl": "https://apt.izzysoft.de/fdroid/repo/com.cmgcode.minimoods_1.apk",
-  "version": "1.0.0"
  },
  {
   "id": "izzy:org.receipt_manager",
