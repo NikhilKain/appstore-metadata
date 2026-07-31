@@ -102,6 +102,11 @@ jobs:
           mkdir _deploy
           cp -r data _deploy/data
           cp announcement.json _deploy/announcement.json
+          # Hero pins. Deployed from main like announcement.json — this job
+          # force-pushes a freshly built tree, so anything not copied here is
+          # erased from gh-pages on the next run. Tolerates the file being absent
+          # so removing a promotion is just deleting it on main.
+          cp featured.json _deploy/featured.json 2>/dev/null || true
 
           cd _deploy
 
