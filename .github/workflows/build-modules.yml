@@ -1,0 +1,54 @@
+name: Build module catalogue
+
+# Builds data/modules.json for the Vyxel metadata CDN.
+#
+# Without this file the app does the same work itself on every visit to the Modules
+# screen: two curated indexes, a fan-out over a hundred-odd module.prop files, and up
+# to twelve paged GitHub organisation listings. That is roughly fifteen seconds cold
+# on a phone and a real bite out of GitHub's 60-requests-an-hour anonymous budget.
+# Done once a day here it costs nothing, and the app's whole module catalogue becomes
+# a single conditional GET that is usually a 304.
+#
+# Runs daily and on manual trigger.
+
+on:
+  workflow_dispatch:        # run manually from the Actions tab
+  schedule:
+    - cron: "0 3 * * *"     # every day 03:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build module catalogue
+        env:
+          # The org listings are ~12 requests and the unauthenticated ceiling is
+          # 60/hour, shared with every other job in this repo.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Built to a temp file first, then moved into place.
+        #
+        # `node build-modules.mjs > data/modules.json` would truncate the published
+        # file before the script had produced a single byte, so a bad upstream day
+        # would replace a good catalogue with an empty one — defeating the script's
+        # own refusal to write an implausible result. Redirecting to /tmp keeps the
+        # committed file untouched, and the move only runs if node exited zero.
+        run: |
+          node scripts/build-modules.mjs > /tmp/modules.json
+          mv /tmp/modules.json data/modules.json
+
+      - name: Commit updated catalogue
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/modules.json
+          git diff --cached --quiet || git commit -m "chore: refresh module catalogue"
+          git push
