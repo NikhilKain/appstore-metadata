@@ -1,0 +1,29 @@
+{
+  "active": true,
+  "expiresAt": "",
+  "apps": [
+    {
+      "repo": "NikhilKain/stride",
+      "name": "Stride",
+      "packageName": "com.vythera.stride",
+      "summary": "Material 3 Expressive step counter for Android — private, offline, no account.",
+      "iconUrl": "https://avatars.githubusercontent.com/u/106899229?v=4",
+      "apkUrl": "https://github.com/NikhilKain/stride/releases/download/v1.0.1/Stride-v1.0.1.apk",
+      "version": "1.0.1",
+      "license": "GPL-3.0",
+      "label": "From the developer"
+    },
+    {
+      "repo": "NikhilKain/auralis-live-lyrics",
+      "name": "Auralis",
+      "packageName": "com.vythera.auralis",
+      "summary": "Floating, time-synced live lyrics over any Android music app.",
+      "iconUrl": "https://avatars.githubusercontent.com/u/106899229?v=4",
+      "apkUrl": "",
+      "storeUrl": "https://play.google.com/store/apps/details?id=com.vythera.auralis",
+      "version": "",
+      "license": "",
+      "label": "From the developer · on Google Play"
+    }
+  ]
+}
